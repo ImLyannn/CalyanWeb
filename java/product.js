@@ -48,6 +48,20 @@ if (!produk) {
     const pesan = encodeURIComponent(`Halo, saya mau tanya soal ${produk.title} (${formatRupiah(produk.price)}).`);
     pOrder.href = `https://wa.me/6281234567890?text=${pesan}`;
 
+    /* ================= TOMBOL FAVORIT ================= */
+
+    const pFavBtn = document.getElementById("pFavBtn");
+    if (pFavBtn) {
+        const favAktif = typeof isFavorite === "function" && isFavorite(produk.id);
+
+        pFavBtn.dataset.id = produk.id;
+        pFavBtn.classList.toggle("active", favAktif);
+        pFavBtn.setAttribute("aria-pressed", favAktif ? "true" : "false");
+
+        const label = pFavBtn.querySelector("span");
+        if (label) label.textContent = favAktif ? "Tersimpan" : "Favorit";
+    }
+
     /* ================= REKOMENDASI ================= */
 
     const recommendContainer = document.getElementById("recommendContainer");

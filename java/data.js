@@ -532,9 +532,19 @@ function buildProductCard(produk) {
 
   const base = window.SITE_BASE || { img: "gambar/", productPage: "html/product.html" };
   const stockNo = "UNIT-" + String(produk.id).padStart(3, "0");
+  const favAktif = typeof isFavorite === "function" && isFavorite(produk.id);
 
   return `
     <div class="card">
+      <button
+        type="button"
+        class="card-fav-btn${favAktif ? " active" : ""}"
+        data-id="${produk.id}"
+        aria-label="Simpan ke favorit"
+        aria-pressed="${favAktif ? "true" : "false"}"
+      >
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7.6-4.7-10-9.4C0.3 8.3 2 4.4 5.8 4c2-.2 3.8.7 6.2 3 2.4-2.3 4.2-3.2 6.2-3 3.8.4 5.5 4.3 3.8 7.6C19.6 16.3 12 21 12 21Z"/></svg>
+      </button>
       <a href="${base.productPage}?id=${produk.id}">
         <span class="card-stock">${stockNo}</span>
         <div class="card-image-wrap">

@@ -230,6 +230,47 @@ nav{
     display:none;
 }
 
+/* ================= NAV TOGGLE (PANAH DROPDOWN — MOBILE ONLY) ================= */
+/* disembunyikan di desktop, nav-menu tetap tampil horizontal seperti biasa */
+
+.nav-toggle{
+    display:none;
+    flex-shrink:0;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+
+    align-items:center;
+    justify-content:center;
+
+    background:var(--surface);
+    border:1px solid var(--rule);
+    color:var(--text);
+
+    cursor:pointer;
+    transition:border-color .2s ease, color .2s ease, transform .25s ease;
+}
+
+.nav-toggle:hover{
+    border-color:var(--amber);
+    color:var(--amber);
+}
+
+.nav-toggle svg{
+    width:16px;
+    height:16px;
+    stroke:currentColor;
+    fill:none;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    transition:transform .25s ease;
+}
+
+nav.nav-open .nav-toggle svg{
+    transform:rotate(180deg);
+}
+
 /* ================= SECTION ================= */
 
 section{
@@ -507,6 +548,7 @@ section{
 }
 
 .card{
+    position:relative;
     background:var(--surface);
     border:1px solid var(--rule);
     border-radius:10px;
@@ -520,6 +562,153 @@ section{
     transform:translateY(-6px);
     border-color:var(--amber);
     box-shadow:0 16px 32px rgba(0,0,0,0.35);
+}
+
+/* ================= TOMBOL FAVORIT ("pin" ke localStorage) ================= */
+
+.card-fav-btn{
+    position:absolute;
+    top:14px;
+    right:14px;
+    z-index:6;
+
+    width:34px;
+    height:34px;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(var(--ink-rgb),0.55);
+    backdrop-filter:blur(6px);
+    border:1px solid var(--rule);
+    color:var(--muted);
+
+    cursor:pointer;
+    transition:background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.card-fav-btn svg{
+    width:16px;
+    height:16px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    transition:fill .2s ease;
+}
+
+.card-fav-btn span{
+    display:none;
+}
+
+.card-fav-btn:hover{
+    border-color:var(--amber);
+    color:var(--amber);
+    transform:scale(1.08);
+}
+
+.card-fav-btn.active{
+    background:var(--amber);
+    border-color:var(--amber);
+    color:var(--ink-fixed);
+}
+
+.card-fav-btn.active svg{
+    fill:currentColor;
+}
+
+/* varian tombol favorit di halaman detail produk — pill dengan label teks */
+
+.product-actions{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:10px;
+}
+
+.product-actions .hero-cta{
+    margin-top:0;
+}
+
+.pdp-fav-btn{
+    position:static;
+    width:auto;
+    height:auto;
+    border-radius:50px;
+    padding:14px 24px;
+    gap:8px;
+}
+
+.pdp-fav-btn svg{
+    width:17px;
+    height:17px;
+}
+
+.pdp-fav-btn span{
+    display:inline;
+    font-family:var(--font-mono);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+}
+
+/* ================= SEKSI FAVORIT SAYA ================= */
+
+.favorite-empty{
+    max-width:1200px;
+    margin:20px auto 0;
+
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:14px;
+
+    padding:50px 24px;
+
+    border:1px dashed var(--rule);
+    border-radius:12px;
+}
+
+.favorite-empty-icon{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:var(--surface);
+    border:1px solid var(--rule);
+    color:var(--muted);
+}
+
+.favorite-empty-icon svg{
+    width:20px;
+    height:20px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2;
+}
+
+.favorite-empty p{
+    font-family:var(--font-mono);
+    font-size:13px;
+    color:var(--muted);
+    max-width:360px;
+}
+
+#favorite{
+    background:var(--ink);
+    min-height:auto;
+    padding-top:40px;
+    padding-bottom:60px;
 }
 
 .card a{
@@ -536,6 +725,10 @@ section{
     color:var(--muted);
     letter-spacing:1px;
     margin-bottom:10px;
+    padding-right:30px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
 .card-image-wrap{
@@ -1233,15 +1426,55 @@ a:focus-visible,
     }
 
     .nav-right{
-        gap:14px;
+        gap:10px;
     }
 
+    /* menu dilipat jadi bar dropdown tipis di bawah navbar, dibuka lewat
+       tombol panah (.nav-toggle) — bukan tampil selalu berjajar lagi */
     .nav-menu{
-        gap:14px;
+        position:fixed;
+        top:60px;
+        left:0;
+        width:100%;
+
+        margin:0;
+        gap:0;
+
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+
+        max-height:0;
+        padding:0 18px;
+
+        background:rgba(var(--ink-rgb),0.97);
+        backdrop-filter:blur(8px);
+        border-bottom:1px solid var(--rule);
+        box-shadow:0 12px 20px rgba(0,0,0,0.2);
+
+        overflow-y:hidden;
+        transition:max-height .28s ease, padding .28s ease;
+
+        z-index:9998;
+    }
+
+    .nav-menu::-webkit-scrollbar{
+        display:none;
+    }
+
+    nav.nav-open .nav-menu{
+        max-height:56px;
+        padding:14px 18px;
+    }
+
+    .nav-menu li{
+        flex:0 0 auto;
     }
 
     .nav-menu a{
-        font-size:11px;
+        font-size:12px;
+        white-space:nowrap;
+        padding:4px 2px;
     }
 
     .nav-menu a::before,
@@ -1257,6 +1490,12 @@ a:focus-visible,
     .theme-toggle svg{
         width:15px;
         height:15px;
+    }
+
+    .nav-toggle{
+        display:flex;
+        width:32px;
+        height:32px;
     }
 
     /* SECTION */
@@ -1307,14 +1546,50 @@ a:focus-visible,
         display:none;
     }
 
-    .card-container .card{
-        flex:0 0 170px;
+    .card-container .card,
+    .product-scroll .card,
+    .recommend-scroll .card{
+        flex:0 0 148px;
         scroll-snap-align:start;
-        padding:14px;
+        padding:12px;
+    }
+
+    .card-fav-btn{
+        width:26px;
+        height:26px;
+        top:8px;
+        right:8px;
+    }
+
+    .card-fav-btn svg{
+        width:12px;
+        height:12px;
+    }
+
+    .card-stock{
+        font-size:10px;
+        padding-right:22px;
+        margin-bottom:8px;
+    }
+
+    .card-image-wrap{
+        padding:16px;
+        margin-bottom:10px;
+        border-radius:6px;
     }
 
     .card h3{
-        font-size:15px;
+        font-size:14px;
+        line-height:1.25;
+    }
+
+    .card .card-tag{
+        font-size:10px;
+    }
+
+    .card .card-price{
+        font-size:13px;
+        margin-top:6px;
     }
 
     .geser{
@@ -1423,7 +1698,22 @@ a:focus-visible,
     .card-container .more-card,
     .product-scroll .more-card,
     .recommend-scroll .more-card{
-        flex:0 0 170px;
+        flex:0 0 148px;
+    }
+
+    .more-card-inner{
+        padding:14px 6px;
+        gap:6px;
+    }
+
+    .more-card-plus{
+        width:36px;
+        height:36px;
+        font-size:18px;
+    }
+
+    .more-card-inner h3{
+        font-size:13px;
     }
 
     /* CATALOG MODAL */

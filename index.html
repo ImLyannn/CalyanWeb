@@ -48,6 +48,7 @@
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#product">Katalog</a></li>
+                <li><a href="#favorite">Favorit</a></li>
                 <li><a href="#lokasi">Lokasi</a></li>
                 <li><a href="#about">Tentang</a></li>
             </ul>
@@ -55,6 +56,10 @@
             <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode tampilan" title="Ganti mode tampilan">
                 <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
                 <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            </button>
+
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu" aria-expanded="false" title="Buka menu">
+                <svg class="icon-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
         </div>
     </nav>
@@ -80,7 +85,7 @@
                 </div>
                 <div class="hero-panel-row">
                     <span>Unit terdaftar</span>
-                    <span>030</span>
+                    <span>006</span>
                 </div>
                 <div class="hero-panel-row">
                     <span>Order via</span>
@@ -113,6 +118,24 @@
         <p class="product-geser animate-on-load delay-5">← Geser untuk melihat produk →</p>
 
         <div class="product-scroll animate-on-load delay-6" id="productContainer"></div>
+    </section>
+
+    <!-- ================= FAVORIT ================= -->
+    <section id="favorite">
+        <div class="section-head animate-on-load delay-4">
+            <h2>Favorit Saya</h2>
+            <span class="section-index" id="favoriteCount">0 UNIT DISIMPAN</span>
+        </div>
+        <p class="product-geser animate-on-load delay-4">← Geser untuk melihat produk →</p>
+
+        <div class="product-scroll animate-on-load delay-5" id="favoriteContainer"></div>
+
+        <div class="favorite-empty animate-on-load delay-5" id="favoriteEmpty">
+            <span class="favorite-empty-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-7.6-4.7-10-9.4C0.3 8.3 2 4.4 5.8 4c2-.2 3.8.7 6.2 3 2.4-2.3 4.2-3.2 6.2-3 3.8.4 5.5 4.3 3.8 7.6C19.6 16.3 12 21 12 21Z"/></svg>
+            </span>
+            <p>Belum ada produk favorit. Tap ikon hati di kartu produk buat nyimpen ke sini.</p>
+        </div>
     </section>
 
     <!-- ================= LOKASI ================= -->
@@ -171,7 +194,9 @@
     </footer>
     
     <script src="java/theme.js"></script>
+    <script src="java/nav.js"></script>
     <script src="java/data.js"></script>
+    <script src="java/favorite.js"></script>
     <script src="java/catalog.js"></script>
     <script src="java/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>

@@ -38,12 +38,17 @@
             <ul class="nav-menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../index.html#product">Katalog</a></li>
+                <li><a href="../index.html#favorite">Favorit</a></li>
                 <li><a href="../index.html#about">Tentang</a></li>
             </ul>
 
             <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode tampilan" title="Ganti mode tampilan">
                 <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
                 <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            </button>
+
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu" aria-expanded="false" title="Buka menu">
+                <svg class="icon-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
         </div>
     </nav>
@@ -65,7 +70,14 @@
 
             <div class="spec-table" id="pSpecs"></div>
 
-            <a class="hero-cta" id="pOrder" href="#" target="_blank">Order via WhatsApp</a>
+            <div class="product-actions">
+                <a class="hero-cta" id="pOrder" href="#" target="_blank">Order via WhatsApp</a>
+
+                <button type="button" class="card-fav-btn pdp-fav-btn" id="pFavBtn" aria-label="Simpan ke favorit" aria-pressed="false">
+                    <svg viewBox="0 0 24 24"><path d="M12 21s-7.6-4.7-10-9.4C0.3 8.3 2 4.4 5.8 4c2-.2 3.8.7 6.2 3 2.4-2.3 4.2-3.2 6.2-3 3.8.4 5.5 4.3 3.8 7.6C19.6 16.3 12 21 12 21Z"/></svg>
+                    <span>Favorit</span>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -83,7 +95,9 @@
         window.SITE_BASE = { img: "../gambar/", productPage: "product.html" };
     </script>
     <script src="../java/theme.js"></script>
+    <script src="../java/nav.js"></script>
     <script src="../java/data.js"></script>
+    <script src="../java/favorite.js"></script>
     <script src="../java/catalog.js"></script>
     <script src="../java/product.js"></script>
 </body>
