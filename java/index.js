@@ -33,7 +33,12 @@ function updateJamBuka() {
 
     if (jamBuka) jamBuka.innerHTML = statusHtml;
     if (jamBukaAbout) jamBukaAbout.innerHTML = statusHtml;
-    if (jamStatus) jamStatus.textContent = buka ? "Buka sekarang" : "Tutup — buka lagi jam 08:00";
+
+    if (jamStatus) {
+        jamStatus.textContent = buka ? "Buka sekarang" : "Tutup — buka lagi jam 08:00";
+        jamStatus.classList.toggle("status-buka", buka);
+        jamStatus.classList.toggle("status-tutup", !buka);
+    }
 }
 
 updateJamBuka();
