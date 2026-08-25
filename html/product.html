@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk — RAK GEAR</title>
+    <meta name="description" content="Detail spesifikasi produk RAK GEAR — order langsung lewat WhatsApp.">
+
+    <link rel="icon" href="../gambar/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+        <div class="logo">
+            <img id="LogoGambar" src="../gambar/logo.svg" alt="RAK GEAR">
+            RAK GEAR
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#product">Katalog</a></li>
+            <li><a href="../index.html#about">Tentang</a></li>
+        </ul>
+    </nav>
+
+    <div class="back-container">
+        <a href="../index.html#product" class="back-btn">‹‹ Kembali ke katalog</a>
+    </div>
+
+    <section class="product-detail" id="productDetail">
+        <div class="product-image">
+            <img id="pImage" src="" alt="">
+        </div>
+
+        <div class="product-info">
+            <p class="card-stock" id="pStock"></p>
+            <h1 id="pTitle"></h1>
+            <h2 id="pPrice"></h2>
+            <p id="pDescription"></p>
+
+            <div class="spec-table" id="pSpecs"></div>
+
+            <a class="hero-cta" id="pOrder" href="#" target="_blank">Order via WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="recommend">
+        <h2>Produk Lainnya</h2>
+        <div class="recommend-scroll" id="recommendContainer"></div>
+    </section>
+
+    <footer>
+        <span>© 2026 RAK GEAR — Denpasar, Bali</span>
+        <span>Dibuat buat portofolio PKL</span>
+    </footer>
+
+    <script src="../java/data.js"></script>
+    <script src="../java/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAK GEAR — Perangkat Gaming Denpasar</title>
+    <meta name="description" content="RAK GEAR — toko perangkat gaming di Denpasar. Mouse, keyboard, headset, dan monitor pilihan, order langsung lewat WhatsApp.">
+
+    <link rel="icon" href="gambar/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+        <div class="logo">
+            <img id="LogoGambar" src="gambar/logo.svg" alt="RAK GEAR">
+            RAK GEAR
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#product">Katalog</a></li>
+            <li><a href="#lokasi">Lokasi</a></li>
+            <li><a href="#about">Tentang</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-eyebrow" id="jamStatus">Memuat jam operasional…</p>
+                <h1>Perangkat gaming, dari <span>rak</span> ke meja lu.</h1>
+                <p>Mouse, keyboard, headset, sampe monitor — dipilih buat dipakai harian, bukan cuma dipajang. Order langsung, chat admin, gasss.</p>
+                <a class="hero-cta" href="#product">Lihat Katalog ↓</a>
+            </div>
+
+            <div class="hero-panel">
+                <div class="hero-panel-row">
+                    <span>Lokasi</span>
+                    <span>Denpasar, Bali</span>
+                </div>
+                <div class="hero-panel-row">
+                    <span>Jam buka</span>
+                    <span id="jamBuka">—</span>
+                </div>
+                <div class="hero-panel-row">
+                    <span>Unit terdaftar</span>
+                    <span>006</span>
+                </div>
+                <div class="hero-panel-row">
+                    <span>Order via</span>
+                    <span>WhatsApp</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ticker">
+            <div class="ticker-track" id="tickerTrack"></div>
+        </div>
+    </section>
+
+    <!-- ================= PRODUCT ================= -->
+
+    <section id="product">
+        <div class="section-head">
+            <h2>Best Seller</h2>
+            <span class="section-index">UNIT 001 — 003</span>
+        </div>
+        <p class="geser">← Geser untuk melihat produk →</p>
+
+        <div class="card-container" id="bestSellerContainer"></div>
+
+        <br><br>
+
+        <div class="section-head">
+            <h2>Produk Lainnya</h2>
+            <span class="section-index">UNIT 004 — 006</span>
+        </div>
+        <p class="product-geser">← Geser untuk melihat produk →</p>
+
+        <div class="product-scroll" id="productContainer"></div>
+    </section>
+
+    <!-- ================= LOKASI ================= -->
+
+    <section class="service-map" id="lokasi">
+
+        <div class="map-banner">
+            <span class="section-index">RAK GEAR — CABANG</span>
+            <h2>Lokasi Cabang Kami</h2>
+            <p>Temukan lokasi terdekat di kotamu, atau chat admin kalau kotamu belum ada di daftar.</p>
+            <button class="map-banner-cta" type="button" onclick="window.open('https://wa.me/6281234567890','_blank')">Chat Admin</button>
+        </div>
+
+        <div id="leafletMap" class="map-canvas"></div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+        <div class="section-head">
+            <h2>Tentang</h2>
+            <span class="section-index">RAK GEAR</span>
+        </div>
+        <p>
+            RAK GEAR adalah toko perangkat gaming yang berbasis di Denpasar, Bali.
+            Kami milih unit yang beneran dipakai buat main dan kerja sehari-hari,
+            bukan sekadar produk kejar diskon. Semua unit yang ada di rak boleh
+            ditanyain detailnya dulu sebelum diorder.
+        </p>
+
+        <h3 class="contact-heading">Hubungi Kami</h3>
+
+        <div class="contact-box" id="contact">
+
+            <div class="contact-item">
+                <span class="label">Telepon</span>
+                <a href="https://wa.me/6281234567890" target="_blank">0812-3456-7890</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="label">Email</span>
+                <a href="mailto:perusahaan@email.com">perusahaan@email.com</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="label">Lokasi</span>
+                <a href="https://maps.app.goo.gl/ZvoAWaBVckwQNPLg8" target="_blank">Denpasar, Bali</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="label">Jam buka</span>
+                <span id="jamBukaAbout">—</span>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2026 RAK GEAR — Denpasar, Bali</span>
+        <span>RAK GEAR</span>
+    </footer>
+
+    <script src="java/data.js"></script>
+    <script src="java/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="java/map.js"></script>
+</body>
+</html>
