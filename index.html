@@ -13,12 +13,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- ================= ANIMASI PEMBUKA & ENTRANCE ================= -->
 </head>
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- ================= PRELOADER ================= -->
+    <div id="preloader">
+        <div class="loader-text">RAK GEAR</div>
+        <div class="loader-bar-container">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
 
-    <nav>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="animate-on-load delay-1">
         <div class="logo">
             <img id="LogoGambar" src="gambar/logo.png" alt="RAK GEAR">
             RAK GEAR
@@ -33,17 +42,16 @@
     </nav>
 
     <!-- ================= HOME ================= -->
-
     <section id="home">
         <div class="hero-inner">
-            <div class="hero-text">
+            <div class="hero-text animate-on-load delay-2">
                 <p class="hero-eyebrow" id="jamStatus">Memuat jam operasional…</p>
                 <h1>Perangkat gaming, dari <span>rak</span> ke meja lu.</h1>
                 <p>Mouse, keyboard, headset, sampe monitor — dipilih buat dipakai harian, bukan cuma dipajang. Order langsung, chat admin, gasss.</p>
                 <a class="hero-cta" href="#product">Lihat Katalog ↓</a>
             </div>
 
-            <div class="hero-panel">
+            <div class="hero-panel animate-on-load delay-3">
                 <div class="hero-panel-row">
                     <span>Lokasi</span>
                     <span>Denpasar, Bali</span>
@@ -63,66 +71,60 @@
             </div>
         </div>
 
-        <div class="ticker">
+        <div class="ticker animate-on-load delay-4">
             <div class="ticker-track" id="tickerTrack"></div>
         </div>
     </section>
 
     <!-- ================= PRODUCT ================= -->
-
     <section id="product">
-        <div class="section-head">
+        <div class="section-head animate-on-load delay-4">
             <h2>Best Seller</h2>
             <span class="section-index">UNIT 001 — 003</span>
         </div>
-        <p class="geser">← Geser untuk melihat produk →</p>
+        <p class="geser animate-on-load delay-4">← Geser untuk melihat produk →</p>
 
-        <div class="card-container" id="bestSellerContainer"></div>
+        <div class="card-container animate-on-load delay-5" id="bestSellerContainer"></div>
 
         <br><br>
 
-        <div class="section-head">
+        <div class="section-head animate-on-load delay-5">
             <h2>Produk Lainnya</h2>
             <span class="section-index">30+ UNIT TERDAFTAR</span>
         </div>
-        <p class="product-geser">← Geser untuk melihat produk →</p>
+        <p class="product-geser animate-on-load delay-5">← Geser untuk melihat produk →</p>
 
-        <div class="product-scroll" id="productContainer"></div>
+        <div class="product-scroll animate-on-load delay-6" id="productContainer"></div>
     </section>
 
     <!-- ================= LOKASI ================= -->
-
     <section class="service-map" id="lokasi">
-
-        <div class="map-banner">
+        <div class="map-banner animate-on-load delay-4">
             <span class="section-index">RAK GEAR — CABANG</span>
             <h2>Lokasi Cabang Kami</h2>
             <p>Temukan lokasi terdekat di kotamu, atau chat admin kalau kotamu belum ada di daftar.</p>
             <button class="map-banner-cta" type="button" onclick="window.open('https://wa.me/6281234567890','_blank')">Chat Admin</button>
         </div>
 
-        <div id="leafletMap" class="map-canvas"></div>
-
+        <div id="leafletMap" class="map-canvas animate-on-load delay-5"></div>
     </section>
 
     <!-- ================= ABOUT ================= -->
-
     <section id="about">
-        <div class="section-head">
+        <div class="section-head animate-on-load delay-4">
             <h2>Tentang</h2>
             <span class="section-index">RAK GEAR</span>
         </div>
-        <p>
+        <p class="animate-on-load delay-5">
             RAK GEAR adalah toko perangkat gaming yang berbasis di Denpasar, Bali.
             Kami milih unit yang beneran dipakai buat main dan kerja sehari-hari,
             bukan sekadar produk kejar diskon. Semua unit yang ada di rak boleh
             ditanyain detailnya dulu sebelum diorder.
         </p>
 
-        <h3 class="contact-heading">Hubungi Kami</h3>
+        <h3 class="contact-heading animate-on-load delay-5">Hubungi Kami</h3>
 
-        <div class="contact-box" id="contact">
-
+        <div class="contact-box animate-on-load delay-6" id="contact">
             <div class="contact-item">
                 <span class="label">Telepon</span>
                 <a href="https://wa.me/6281234567890" target="_blank">0812-3456-7890</a>
@@ -142,18 +144,14 @@
                 <span class="label">Jam buka</span>
                 <span id="jamBukaAbout">—</span>
             </div>
-
         </div>
     </section>
 
-    <footer>
+    <footer class="animate-on-load delay-6">
         <span>© 2026 RAK GEAR — Denpasar, Bali</span>
         <span>RAK GEAR</span>
     </footer>
-
-    <script>
-        window.SITE_BASE = { img: "gambar/", productPage: "html/product.html" };
-    </script>
+    
     <script src="java/data.js"></script>
     <script src="java/catalog.js"></script>
     <script src="java/index.js"></script>

@@ -1324,3 +1324,104 @@ a:focus-visible,
         gap:14px;
     }
 }
+
+        /* Variabel warna tema (sesuaikan --accent-color dengan style.css Anda) */
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-preloader: #050505;
+            --text-main: #e0e0e0;
+            --accent-color: #fda635; /* Neon green gaming vibe, ganti jika perlu */
+        }
+
+        /* --- PRELOADER --- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-preloader);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-main);
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .loader-text::after {
+            content: '_';
+            animation: blink 1s step-end infinite;
+            color: var(--accent-color);
+        }
+
+        .loader-bar-container {
+            width: 200px;
+            height: 3px;
+            background-color: #1a1a1a;
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loader-bar {
+            height: 100%;
+            width: 0%;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+            animation: loadProgress 1.5s ease-in-out forwards;
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        @keyframes loadProgress {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+
+        /* --- ENTRANCE ANIMATIONS --- */
+        .animate-on-load {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Staggered delays untuk efek berurutan yang halus */
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+
+        /* Memastikan konten utama tidak terlihat berantakan sebelum animasi */
+        body {
+            overflow-x: hidden;
+        }

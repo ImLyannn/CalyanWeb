@@ -1,4 +1,20 @@
 /* ================= JAM OPERASIONAL ================= */
+        window.SITE_BASE = { img: "gambar/", productPage: "html/product.html" };
+
+        // ================= PRELOADER & ENTRANCE LOGIC =================
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            
+            // Beri sedikit jeda agar animasi loading bar terlihat sempurna
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+                
+                // Opsional: hapus dari DOM setelah transisi selesai untuk menghemat memori
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 600); // Sesuai dengan durasi transition di CSS (0.6s)
+            }, 1200); // Total waktu preloader tampil (1.2 detik)
+        });
 
 function updateJamBuka() {
 
