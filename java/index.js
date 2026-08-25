@@ -23,37 +23,21 @@ function updateJamBuka() {
 updateJamBuka();
 
 /* ================= KARTU PRODUK ================= */
-
-function buildCard(produk, { compact = false } = {}) {
-
-    const stockNo = "UNIT-" + String(produk.id).padStart(3, "0");
-
-    return `
-        <div class="card">
-            <a href="html/product.html?id=${produk.id}">
-                <span class="card-stock">${stockNo}</span>
-                <div class="card-image-wrap">
-                    <img class="card-image" src="gambar/${produk.icon}.svg" alt="${produk.title}" loading="lazy">
-                </div>
-                <h3>${produk.title}</h3>
-                <span class="card-tag">${produk.tag}</span>
-                <span class="card-price">${formatRupiah(produk.price)}</span>
-            </a>
-        </div>
-    `;
-}
+/* Jumlah maksimal kartu yang ditampilkan di baris "Produk Lainnya"
+   sebelum kartu "Lihat Lebih Lengkap" muncul di ujung baris. */
+const LAINNYA_LIMIT = 6;
 
 const bestSellerContainer = document.getElementById("bestSellerContainer");
 const productContainer = document.getElementById("productContainer");
 
 if (bestSellerContainer) {
     const bestSellers = PRODUCTS.filter((p) => p.tag === "Best Seller");
-    bestSellerContainer.innerHTML = bestSellers.map((p) => buildCard(p)).join("");
+    bestSellerContainer.innerHTML = bestSellers.map((p) => buildProductCard(p)).join("");
 }
 
 if (productContainer) {
-    const lainnya = PRODUCTS.filter((p) => p.tag !== "Best Seller");
-    productContainer.innerHTML = lainnya.map((p) => buildCard(p, { compact: true })).join("");
+    const lainnya = PRODUCTS.filter((p) => p.tag !== "Best Seller").slice(0, LAINNYA_LIMIT);
+    productContainer.innerHTML = lainnya.map((p) => buildProductCard(p)).join("") + buildMoreCard();
 }
 
 /* ================= SPEC TICKER ================= */
@@ -69,4 +53,3 @@ if (tickerTrack) {
     // digandakan biar animasi looping-nya mulus tanpa jeda
     tickerTrack.innerHTML = highlights + highlights;
 }
-

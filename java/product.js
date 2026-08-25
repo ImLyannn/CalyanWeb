@@ -55,22 +55,8 @@ if (!produk) {
     const rekomendasi = PRODUCTS
         .filter((p) => p.id !== produk.id)
         .sort(() => Math.random() - 0.5)
-        .slice(0, 10);
+        .slice(0, 9);
 
-    recommendContainer.innerHTML = rekomendasi
-        .map(
-            (p) => `
-                <div class="card recommend-card">
-                    <a href="product.html?id=${p.id}">
-                        <span class="card-stock">UNIT-${String(p.id).padStart(3, "0")}</span>
-                        <div class="card-image-wrap">
-                            <img class="card-image" src="../gambar/${p.icon}.svg" alt="${p.title}" loading="lazy">
-                        </div>
-                        <h3>${p.title}</h3>
-                        <span class="card-price">${formatRupiah(p.price)}</span>
-                    </a>
-                </div>
-            `
-        )
-        .join("");
+    recommendContainer.innerHTML =
+        rekomendasi.map((p) => buildProductCard(p)).join("") + buildMoreCard();
 }
