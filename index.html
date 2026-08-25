@@ -14,6 +14,17 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- Set tema sebelum render biar nggak ada kedipan warna -->
+    <script>
+        (function(){
+            var saved = localStorage.getItem('rakgear-theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            if(theme === 'light'){
+                document.documentElement.setAttribute('data-theme','light');
+            }
+        })();
+    </script>
+
     <!-- ================= ANIMASI PEMBUKA & ENTRANCE ================= -->
 </head>
 <body>
@@ -33,12 +44,19 @@
             RAK GEAR
         </div>
 
-        <ul class="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#product">Katalog</a></li>
-            <li><a href="#lokasi">Lokasi</a></li>
-            <li><a href="#about">Tentang</a></li>
-        </ul>
+        <div class="nav-right">
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">Katalog</a></li>
+                <li><a href="#lokasi">Lokasi</a></li>
+                <li><a href="#about">Tentang</a></li>
+            </ul>
+
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti mode tampilan" title="Ganti mode tampilan">
+                <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+                <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            </button>
+        </div>
     </nav>
 
     <!-- ================= HOME ================= -->
@@ -152,6 +170,7 @@
         <span>RAK GEAR</span>
     </footer>
     
+    <script src="java/theme.js"></script>
     <script src="java/data.js"></script>
     <script src="java/catalog.js"></script>
     <script src="java/index.js"></script>
