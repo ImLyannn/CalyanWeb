@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAK GEAR — Perangkat Gaming Denpasar</title>
-    <meta name="description" content="RAK GEAR — toko perangkat gaming di Denpasar. Mouse, keyboard, headset, dan monitor pilihan, order langsung lewat WhatsApp.">
+    <title>CALYAN PRINT — Jasa Cetak & Sablon Denpasar</title>
+    <meta name="description" content="CALYAN PRINT — jasa cetak dan sablon di Denpasar. Hand printing, dying, sublimation, design, film, sampai screen printing, order langsung lewat WhatsApp.">
 
     <link rel="icon" href="gambar/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
     <!-- Set tema sebelum render biar nggak ada kedipan warna -->
     <script>
         (function(){
-            var saved = localStorage.getItem('rakgear-theme');
+            var saved = localStorage.getItem('calyanprint-theme');
             var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
             if(theme === 'light'){
                 document.documentElement.setAttribute('data-theme','light');
@@ -31,7 +31,7 @@
 
     <!-- ================= PRELOADER ================= -->
     <div id="preloader">
-        <div class="loader-text">RAK GEAR</div>
+        <div class="loader-text">CALYAN PRINT</div>
         <div class="loader-bar-container">
             <div class="loader-bar"></div>
         </div>
@@ -40,8 +40,8 @@
     <!-- ================= NAVBAR ================= -->
     <nav class="animate-on-load delay-1">
         <div class="logo">
-            <img id="LogoGambar" src="gambar/logo.png" alt="RAK GEAR">
-            RAK GEAR
+            <img id="LogoGambar" src="gambar/logo.png" alt="CALYAN PRINT">
+            CALYAN PRINT
         </div>
 
         <div class="nav-right">
@@ -69,8 +69,8 @@
         <div class="hero-inner">
             <div class="hero-text animate-on-load delay-2">
                 <p class="hero-eyebrow" id="jamStatus">Memuat jam operasional…</p>
-                <h1>Perangkat gaming, dari <span>rak</span> ke meja lu.</h1>
-                <p>Mouse, keyboard, headset, sampe monitor — dipilih buat dipakai harian, bukan cuma dipajang. Order langsung, chat admin, gasss.</p>
+                <h1>Sablon dan cetak, dari <span>ide</span> ke tangan lu.</h1>
+                <p>Hand printing, dying, sublimation, design, film, sampai screen printing — dikerjakan buat dipakai, bukan cuma buat dipajang. Order langsung, chat admin, gasss.</p>
                 <a class="hero-cta" href="#product">Lihat Katalog ↓</a>
             </div>
 
@@ -84,7 +84,7 @@
                     <span id="jamBuka">—</span>
                 </div>
                 <div class="hero-panel-row">
-                    <span>Unit terdaftar</span>
+                    <span>Layanan tersedia</span>
                     <span>030</span>
                 </div>
                 <div class="hero-panel-row">
@@ -103,19 +103,19 @@
     <section id="product">
         <div class="section-head animate-on-load delay-4">
             <h2>Best Seller</h2>
-            <span class="section-index">UNIT 001 — 003</span>
+            <span class="section-index">LAYANAN 001 — 006</span>
         </div>
-        <p class="geser animate-on-load delay-4">← Geser untuk melihat produk →</p>
+        <p class="geser animate-on-load delay-4">← Geser untuk melihat layanan →</p>
 
         <div class="card-container animate-on-load delay-5" id="bestSellerContainer"></div>
 
         <br><br>
 
         <div class="section-head animate-on-load delay-5">
-            <h2>Produk Lainnya</h2>
-            <span class="section-index">30+ UNIT TERDAFTAR</span>
+            <h2>Layanan Lainnya</h2>
+            <span class="section-index">30+ LAYANAN TERSEDIA</span>
         </div>
-        <p class="product-geser animate-on-load delay-5">← Geser untuk melihat produk →</p>
+        <p class="product-geser animate-on-load delay-5">← Geser untuk melihat layanan →</p>
 
         <div class="product-scroll animate-on-load delay-6" id="productContainer"></div>
     </section>
@@ -124,9 +124,9 @@
     <section id="favorite">
         <div class="section-head animate-on-load delay-4">
             <h2>Favorit Saya</h2>
-            <span class="section-index" id="favoriteCount">0 UNIT DISIMPAN</span>
+            <span class="section-index" id="favoriteCount">0 LAYANAN DISIMPAN</span>
         </div>
-        <p class="product-geser animate-on-load delay-4">← Geser untuk melihat produk →</p>
+        <p class="product-geser animate-on-load delay-4">← Geser untuk melihat layanan →</p>
 
         <div class="product-scroll animate-on-load delay-5" id="favoriteContainer"></div>
 
@@ -134,14 +134,14 @@
             <span class="favorite-empty-icon">
                 <svg viewBox="0 0 24 24"><path d="M12 21s-7.6-4.7-10-9.4C0.3 8.3 2 4.4 5.8 4c2-.2 3.8.7 6.2 3 2.4-2.3 4.2-3.2 6.2-3 3.8.4 5.5 4.3 3.8 7.6C19.6 16.3 12 21 12 21Z"/></svg>
             </span>
-            <p>Belum ada produk favorit. Tap ikon hati di kartu produk buat nyimpen ke sini.</p>
+            <p>Belum ada layanan favorit. Tap ikon hati di kartu layanan buat nyimpen ke sini.</p>
         </div>
     </section>
 
     <!-- ================= LOKASI ================= -->
     <section class="service-map" id="lokasi">
         <div class="map-banner animate-on-load delay-4">
-            <span class="section-index">RAK GEAR — CABANG</span>
+            <span class="section-index">CALYAN PRINT — CABANG</span>
             <h2>Lokasi Cabang Kami</h2>
             <p>Temukan lokasi terdekat di kotamu, atau chat admin kalau kotamu belum ada di daftar.</p>
             <button class="map-banner-cta" type="button" onclick="window.open('https://wa.me/6281234567890','_blank')">Chat Admin</button>
@@ -154,13 +154,13 @@
     <section id="about">
         <div class="section-head animate-on-load delay-4">
             <h2>Tentang</h2>
-            <span class="section-index">RAK GEAR</span>
+            <span class="section-index">CALYAN PRINT</span>
         </div>
         <p class="animate-on-load delay-5">
-            RAK GEAR adalah toko perangkat gaming yang berbasis di Denpasar, Bali.
-            Kami milih unit yang beneran dipakai buat main dan kerja sehari-hari,
-            bukan sekadar produk kejar diskon. Semua unit yang ada di rak boleh
-            ditanyain detailnya dulu sebelum diorder.
+            CALYAN PRINT adalah usaha jasa cetak dan sablon yang berbasis di Denpasar, Bali.
+            Kami ngerjain mulai dari hand printing, dying, sublimation, design, sampai
+            film dan screen printing — buat kaos, merchandise, sampai kebutuhan produksi
+            konveksi. Semua layanan boleh ditanyain detailnya dulu sebelum diorder.
         </p>
 
         <h3 class="contact-heading animate-on-load delay-5">Hubungi Kami</h3>
@@ -173,7 +173,7 @@
 
             <div class="contact-item">
                 <span class="label">Email</span>
-                <a href="mailto:perusahaan@email.com">perusahaan@email.com</a>
+                <a href="mailto:calyanprint@email.com">calyanprint@email.com</a>
             </div>
 
             <div class="contact-item">
@@ -189,7 +189,7 @@
     </section>
 
     <footer class="animate-on-load delay-6">
-        <span>© 2026 RAK GEAR — Denpasar, Bali</span>
+        <span>© 2026 CALYAN PRINT — Denpasar, Bali</span>
     </footer>
     
     <script src="java/theme.js"></script>

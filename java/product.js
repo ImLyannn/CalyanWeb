@@ -8,16 +8,16 @@ if (!produk) {
 
     productDetail.innerHTML = `
         <div class="product-info">
-            <p class="card-stock">UNIT TIDAK DITEMUKAN</p>
-            <h1>Produk tidak ditemukan</h1>
-            <p>Link yang lu buka sepertinya salah atau produknya udah gak ada di katalog.</p>
+            <p class="card-stock">LAYANAN TIDAK DITEMUKAN</p>
+            <h1>Layanan tidak ditemukan</h1>
+            <p>Link yang lu buka sepertinya salah atau layanannya udah gak ada di katalog.</p>
             <a class="hero-cta" href="../index.html#product">Kembali ke Katalog</a>
         </div>
     `;
 
 } else {
 
-    document.title = produk.title + " — RAK GEAR";
+    document.title = produk.title + " — CALYAN PRINT";
 
     const pImage = document.getElementById("pImage");
     const pStock = document.getElementById("pStock");
@@ -29,7 +29,7 @@ if (!produk) {
 
     pImage.src = "../gambar/" + produk.icon + ".svg";
     pImage.alt = produk.title;
-    pStock.textContent = "UNIT-" + String(produk.id).padStart(3, "0");
+    pStock.textContent = "PRINT-" + String(produk.id).padStart(3, "0");
     pTitle.textContent = produk.title;
     pPrice.textContent = formatRupiah(produk.price);
     pDescription.textContent = produk.description;

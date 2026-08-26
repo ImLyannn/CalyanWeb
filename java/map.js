@@ -4,11 +4,11 @@
 ================================================================= */
 
 const LOKASI = [
-  { nama: "RAK GEAR — Denpasar", lat: -8.6705, lng: 115.2126 },
-  { nama: "RAK GEAR — Surabaya", lat: -7.2575, lng: 112.7521 },
-  { nama: "RAK GEAR — Yogyakarta", lat: -7.7956, lng: 110.3695 },
-  { nama: "RAK GEAR — Jakarta", lat: -6.2088, lng: 106.8456 },
-  { nama: "RAK GEAR — Bandung", lat: -6.9175, lng: 107.6191 },
+  { nama: "CALYAN PRINT — Denpasar", lat: -8.6705, lng: 115.2126 },
+  { nama: "CALYAN PRINT — Surabaya", lat: -7.2575, lng: 112.7521 },
+  { nama: "CALYAN PRINT — Yogyakarta", lat: -7.7956, lng: 110.3695 },
+  { nama: "CALYAN PRINT — Jakarta", lat: -6.2088, lng: 106.8456 },
+  { nama: "CALYAN PRINT — Bandung", lat: -6.9175, lng: 107.6191 },
 ];
 
 const mapCanvas = document.getElementById("leafletMap");

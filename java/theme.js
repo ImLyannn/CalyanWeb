@@ -3,7 +3,7 @@
    ada kedipan warna pas halaman baru load. Di sini tinggal urus tombolnya. */
 
 (function () {
-    var STORAGE_KEY = 'rakgear-theme';
+    var STORAGE_KEY = 'calyanprint-theme';
 
     function getCurrentTheme() {
         return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';

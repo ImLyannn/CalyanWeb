@@ -4,7 +4,7 @@
    kartu produk (buildProductCard) sudah menyertakan tombol hati ini.
 ================================================================= */
 
-const FAVORITES_KEY = "rakgear-favorites";
+const FAVORITES_KEY = "calyanprint-favorites";
 
 /* ---------- baca / simpan daftar id favorit ---------- */
 
@@ -64,7 +64,7 @@ function renderFavoritesSection() {
     .filter(Boolean);
 
   if (countLabel) {
-    countLabel.textContent = favProduk.length + " UNIT DISIMPAN";
+    countLabel.textContent = favProduk.length + " LAYANAN DISIMPAN";
   }
 
   if (favProduk.length === 0) {
