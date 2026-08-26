@@ -1430,7 +1430,9 @@ a:focus-visible,
     }
 
     /* menu dilipat jadi bar dropdown tipis di bawah navbar, dibuka lewat
-       tombol panah (.nav-toggle) — bukan tampil selalu berjajar lagi */
+       tombol panah (.nav-toggle) — bukan tampil selalu berjajar lagi.
+       Tiap link dikasih "tatakan" sendiri: chip bulat dengan jarak &
+       bayangan tipis, jadi kesannya ngambang di atas alasnya. */
     .nav-menu{
         position:fixed;
         top:60px;
@@ -1438,7 +1440,8 @@ a:focus-visible,
         width:100%;
 
         margin:0;
-        gap:0;
+        gap:10px;
+        align-items:center;
 
         flex-wrap:nowrap;
         overflow-x:auto;
@@ -1463,7 +1466,7 @@ a:focus-visible,
     }
 
     nav.nav-open .nav-menu{
-        max-height:56px;
+        max-height:68px;
         padding:14px 18px;
     }
 
@@ -1471,10 +1474,29 @@ a:focus-visible,
         flex:0 0 auto;
     }
 
+    /* "tatakan": tiap link punya alas sendiri (chip bulat) yang beda
+       warna dari bar menu, dikasih border tipis + bayangan biar
+       kelihatan menonjol/ngambang di atas alasnya */
     .nav-menu a{
+        display:block;
         font-size:12px;
         white-space:nowrap;
-        padding:4px 2px;
+
+        padding:9px 16px;
+        border-radius:999px;
+
+        background:var(--surface);
+        border:1px solid var(--rule);
+        box-shadow:0 3px 0 rgba(0,0,0,0.18);
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a:active{
+        color:var(--ink-fixed);
+        background:var(--amber);
+        border-color:var(--amber);
+        box-shadow:0 2px 0 rgba(0,0,0,0.18);
+        transform:translateY(1px);
     }
 
     .nav-menu a::before,
