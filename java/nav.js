@@ -99,3 +99,24 @@
     setActive(sections[0].id);
   });
 })();
+
+/* ================================================================
+   TOMBOL "KEMBALI KE KATALOG" — nempel di bawah navbar (sticky).
+   Di hp, begitu discroll ke bawah tulisannya menciut jadi "‹‹" doang
+   biar gak makan tempat; begitu balik ke atas, tulisannya muncul lagi
+   pelan-pelan (bukan tiba-tiba).
+================================================================= */
+
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    const backContainer = document.getElementById("backContainer");
+    if (!backContainer) return;
+
+    function updateScrolled() {
+      backContainer.classList.toggle("is-scrolled", window.scrollY > 30);
+    }
+
+    updateScrolled();
+    window.addEventListener("scroll", updateScrolled, { passive: true });
+  });
+})();

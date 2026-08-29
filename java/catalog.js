@@ -116,13 +116,14 @@ function closeCatalogModal() {
 /* ---------- pasang trigger di kartu "Lihat Lebih Lengkap" ---------- */
 
 document.addEventListener("click", (e) => {
-  const trigger = e.target.closest("#moreCatalogTrigger");
+  const trigger = e.target.closest("#moreCatalogTrigger, [data-open-catalog]");
   if (trigger) openCatalogModal("semua");
 });
 
 document.addEventListener("keydown", (e) => {
   if (e.key !== "Enter" && e.key !== " ") return;
-  if (e.target.id === "moreCatalogTrigger") {
+  const target = e.target.closest("#moreCatalogTrigger, [data-open-catalog]");
+  if (target) {
     e.preventDefault();
     openCatalogModal("semua");
   }

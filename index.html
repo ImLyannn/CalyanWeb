@@ -62,8 +62,32 @@
         </div>
     </nav>
 
+    <!-- ================= PAGE NAVIGATOR (titik posisi halaman, kanan layar) ================= -->
+    <div class="page-nav" id="pageNav" aria-label="Navigasi halaman">
+        <button class="page-nav-arrow" id="pageNavUp" type="button" aria-label="Ke halaman sebelumnya">
+            <svg viewBox="0 0 24 24"><polyline points="6 15 12 9 18 15"></polyline></svg>
+        </button>
+
+        <div class="page-nav-dots" id="pageNavDots">
+            <button class="page-nav-dot" data-target="home" aria-label="Ke Home" type="button"></button>
+            <button class="page-nav-dot" data-target="product" aria-label="Ke Katalog" type="button"></button>
+            <button class="page-nav-dot" data-target="favorite" aria-label="Ke Favorit" type="button"></button>
+            <button class="page-nav-dot" data-target="about" aria-label="Ke Tentang" type="button"></button>
+        </div>
+
+        <button class="page-nav-arrow" id="pageNavDown" type="button" aria-label="Ke halaman berikutnya">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+    </div>
+
     <!-- ================= HOME ================= -->
     <section id="home">
+        <!-- Background Home: gambar/video diatur lewat HERO_BACKGROUND
+             di java/herobg.js, dan disuntikkan otomatis ke sini -->
+        <div class="hero-bg" id="heroBg" aria-hidden="true">
+            <div class="hero-bg-overlay"></div>
+        </div>
+
         <div class="hero-inner">
             <div class="hero-text animate-on-load delay-2">
                 <p class="hero-eyebrow" id="jamStatus">Memuat jam operasional…</p>
@@ -111,7 +135,12 @@
 
         <div class="section-head animate-on-load delay-5">
             <h2>Layanan Lainnya</h2>
-            <span class="section-index">30+ LAYANAN TERSEDIA</span>
+            <div class="section-head-actions">
+                <span class="section-index">30+ LAYANAN TERSEDIA</span>
+                <button type="button" class="view-catalog-btn" data-open-catalog>
+                    Lihat Katalog <span aria-hidden="true">→</span>
+                </button>
+            </div>
         </div>
         <p class="product-geser animate-on-load delay-5">← Geser untuk melihat layanan →</p>
 
@@ -180,6 +209,8 @@
     
     <script src="java/theme.js"></script>
     <script src="java/nav.js"></script>
+    <script src="java/herobg.js"></script>
+    <script src="java/pagenav.js"></script>
     <script src="java/data.js"></script>
     <script src="java/favorite.js"></script>
     <script src="java/catalog.js"></script>

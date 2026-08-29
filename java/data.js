@@ -29,10 +29,10 @@ const PRODUCTS = [
     description:
       "Sablon manual pakai tinta rubber yang elastis dan nutup rapat di kain gelap maupun terang. Hasil solid, gak gampang retak walau sering dicuci.",
     specs: [
-      { label: "Teknik", value: "Manual screen printing" },
+      { label: "Teknik", value: "HAND PRINTING" },
       { label: "Tinta", value: "Rubber ink" },
       { label: "Media", value: "Kaos katun combed" },
-      { label: "Minimal order", value: "12 pcs" },
+      { label: "Durasi", value: "12 pcs" },
     ],
   },
   {
@@ -45,7 +45,7 @@ const PRODUCTS = [
     description:
       "Tinta plastisol dengan hasil warna tebal dan detail lebih tajam, cocok buat desain full color atau gradasi sederhana di atas kain.",
     specs: [
-      { label: "Teknik", value: "Manual screen printing" },
+      { label: "Teknik", value: "HAND PRINTING" },
       { label: "Tinta", value: "Plastisol" },
       { label: "Media", value: "Kaos, hoodie" },
       { label: "Minimal order", value: "12 pcs" },
@@ -61,7 +61,7 @@ const PRODUCTS = [
     description:
       "Sablon manual khusus tote bag kanvas, pas buat merchandise event, seminar, atau totebag branding usaha kecil.",
     specs: [
-      { label: "Teknik", value: "Manual screen printing" },
+      { label: "Teknik", value: "HAND PRINTING" },
       { label: "Tinta", value: "Rubber ink" },
       { label: "Media", value: "Kanvas tote bag" },
       { label: "Minimal order", value: "20 pcs" },
@@ -77,7 +77,7 @@ const PRODUCTS = [
     description:
       "Sablon di permukaan topi yang melengkung, dikerjakan pakai jig khusus biar posisi desain tetap presisi dan rapi.",
     specs: [
-      { label: "Teknik", value: "Manual screen printing" },
+      { label: "Teknik", value: "HAND PRINTING" },
       { label: "Tinta", value: "Rubber ink" },
       { label: "Media", value: "Topi trucker/baseball" },
       { label: "Minimal order", value: "12 pcs" },
@@ -93,7 +93,7 @@ const PRODUCTS = [
     description:
       "Sablon manual sampai 4 warna dalam satu desain, tiap warna dicetak lewat screen terpisah biar hasil rapi dan presisi.",
     specs: [
-      { label: "Teknik", value: "Manual screen printing" },
+      { label: "Teknik", value: "HAND PRINTING" },
       { label: "Jumlah warna", value: "2 - 4 warna" },
       { label: "Media", value: "Kaos katun combed" },
       { label: "Minimal order", value: "12 pcs" },
@@ -111,7 +111,7 @@ const PRODUCTS = [
     description:
       "Pencelupan kain dengan pola tie dye spiral, swirl, atau ombre. Warna dikunci pakai fiksasi biar gak gampang luntur pas dicuci.",
     specs: [
-      { label: "Teknik", value: "Ikat celup (tie dye)" },
+      { label: "Teknik", value: "DYING" },
       { label: "Pewarna", value: "Reactive dye" },
       { label: "Media", value: "Kaos katun putih" },
       { label: "Durasi", value: "3 - 5 hari kerja" },
@@ -127,7 +127,7 @@ const PRODUCTS = [
     description:
       "Ganti warna dasar kain sesuai permintaan, cocok buat yang mau seragam komunitas atau merchandise dengan warna khusus.",
     specs: [
-      { label: "Teknik", value: "Celup rata satu warna" },
+      { label: "Teknik", value: "DYING" },
       { label: "Pewarna", value: "Reactive dye" },
       { label: "Media", value: "Kain katun / rayon" },
       { label: "Durasi", value: "2 - 4 hari kerja" },
@@ -143,7 +143,7 @@ const PRODUCTS = [
     description:
       "Efek gradasi warna dari gelap ke terang (atau sebaliknya) yang dicelup bertahap, hasilnya smooth dan gak ada garis tegas.",
     specs: [
-      { label: "Teknik", value: "Celup gradasi (ombre)" },
+      { label: "Teknik", value: "DYING" },
       { label: "Pewarna", value: "Reactive dye" },
       { label: "Media", value: "Kaos, dress katun" },
       { label: "Durasi", value: "3 - 5 hari kerja" },
@@ -159,7 +159,7 @@ const PRODUCTS = [
     description:
       "Motif ala batik dengan teknik ikat dan lipat sebelum dicelup, tiap lembar hasilnya unik dan gak ada yang identik.",
     specs: [
-      { label: "Teknik", value: "Ikat lipat + celup" },
+      { label: "Teknik", value: "DYING" },
       { label: "Pewarna", value: "Naphtol / reactive dye" },
       { label: "Media", value: "Kain mori / katun" },
       { label: "Durasi", value: "4 - 6 hari kerja" },
@@ -175,7 +175,7 @@ const PRODUCTS = [
     description:
       "Harga per meter buat pencelupan warna polos dalam jumlah besar, cocok buat kebutuhan produksi seragam atau konveksi.",
     specs: [
-      { label: "Satuan", value: "Per meter kain" },
+      { label: "Teknik", value: "DYING" },
       { label: "Pewarna", value: "Reactive dye" },
       { label: "Minimal order", value: "50 meter" },
       { label: "Durasi", value: "5 - 7 hari kerja" },
@@ -193,7 +193,7 @@ const PRODUCTS = [
     description:
       "Cetak desain full satu badan kaos, warna tajam dan gak mudah pudar karena tinta meresap langsung ke serat kain.",
     specs: [
-      { label: "Teknik", value: "Sublimasi full print" },
+      { label: "Teknik", value: "SUBLIMASI" },
       { label: "Media", value: "Kaos polyester" },
       { label: "Resolusi cetak", value: "1440 dpi" },
       { label: "Minimal order", value: "1 pcs" },
@@ -209,7 +209,7 @@ const PRODUCTS = [
     description:
       "Foto atau desain custom yang dicetak permanen di permukaan mug keramik, pas buat gift atau merchandise personal.",
     specs: [
-      { label: "Teknik", value: "Sublimasi mug press" },
+      { label: "Teknik", value: "SUBLIMASI" },
       { label: "Media", value: "Mug keramik putih" },
       { label: "Kapasitas", value: "11 oz" },
       { label: "Minimal order", value: "1 pcs" },
@@ -225,7 +225,7 @@ const PRODUCTS = [
     description:
       "Jersey full print buat tim futsal, basket, atau esport. Bahan dry-fit adem dan warna tetap cerah walau sering dipakai main.",
     specs: [
-      { label: "Teknik", value: "Sublimasi full print" },
+      { label: "Teknik", value: "SUBLIMASI" },
       { label: "Media", value: "Kain dry-fit" },
       { label: "Custom nama/nomor", value: "Bisa" },
       { label: "Minimal order", value: "5 pcs" },
@@ -241,7 +241,7 @@ const PRODUCTS = [
     description:
       "Cetak sublim di berbagai media promosi kecil seperti gantungan kunci, piring, atau plakat akrilik lapis khusus.",
     specs: [
-      { label: "Teknik", value: "Sublimasi media custom" },
+      { label: "Teknik", value: "SUBLIMASI" },
       { label: "Media", value: "Akrilik / keramik lapis" },
       { label: "Ukuran", value: "Sesuai media" },
       { label: "Minimal order", value: "1 pcs" },
@@ -257,7 +257,7 @@ const PRODUCTS = [
     description:
       "Sarung bantal dengan desain atau foto custom full print, cocok buat kado ulang tahun atau merchandise komunitas.",
     specs: [
-      { label: "Teknik", value: "Sublimasi full print" },
+      { label: "Teknik", value: "SUBLIMASI" },
       { label: "Media", value: "Kain kanvas / satin" },
       { label: "Ukuran", value: "40 x 40 cm" },
       { label: "Minimal order", value: "1 pcs" },
@@ -275,7 +275,7 @@ const PRODUCTS = [
     description:
       "Desain logo dari nol sesuai konsep dan warna brand, lengkap dengan file siap cetak dan siap dipakai buat kebutuhan sablon.",
     specs: [
-      { label: "Revisi", value: "3x revisi" },
+      { label: "Teknik", value: "DESIGN" },
       { label: "File akhir", value: "AI, PNG, PDF" },
       { label: "Durasi", value: "2 - 4 hari kerja" },
       { label: "Konsultasi", value: "Gratis via WhatsApp" },
@@ -291,7 +291,7 @@ const PRODUCTS = [
     description:
       "Desain grafis buat kaos, mulai dari ilustrasi sampai tipografi, disesuaikan sama tema komunitas atau event.",
     specs: [
-      { label: "Revisi", value: "2x revisi" },
+      { label: "Teknik", value: "DESIGN" },
       { label: "File akhir", value: "PNG, PDF siap sablon" },
       { label: "Durasi", value: "1 - 3 hari kerja" },
       { label: "Konsultasi", value: "Gratis via WhatsApp" },
@@ -307,7 +307,7 @@ const PRODUCTS = [
     description:
       "Desain kemasan produk UMKM biar tampil lebih profesional di rak toko maupun marketplace online.",
     specs: [
-      { label: "Revisi", value: "3x revisi" },
+      { label: "Teknik", value: "DESIGN" },
       { label: "File akhir", value: "AI, PDF, dieline" },
       { label: "Durasi", value: "3 - 5 hari kerja" },
       { label: "Konsultasi", value: "Gratis via WhatsApp" },
@@ -323,7 +323,7 @@ const PRODUCTS = [
     description:
       "Ilustrasi digital detail buat karya seni cetak, poster, atau desain kaos edisi terbatas dengan gaya bebas sesuai request.",
     specs: [
-      { label: "Revisi", value: "3x revisi" },
+      { label: "Teknik", value: "DESIGN" },
       { label: "File akhir", value: "PNG resolusi tinggi" },
       { label: "Durasi", value: "4 - 7 hari kerja" },
       { label: "Konsultasi", value: "Gratis via WhatsApp" },
@@ -339,7 +339,7 @@ const PRODUCTS = [
     description:
       "Buat yang udah punya desain tapi mau dirapikan ulang, ganti warna, atau disesuaikan ukurannya biar siap cetak.",
     specs: [
-      { label: "Revisi", value: "2x revisi" },
+      { label: "Teknik", value: "DESIGN" },
       { label: "File akhir", value: "PNG, PDF siap cetak" },
       { label: "Durasi", value: "1 - 2 hari kerja" },
       { label: "Konsultasi", value: "Gratis via WhatsApp" },
@@ -357,7 +357,7 @@ const PRODUCTS = [
     description:
       "Pisah desain jadi film transparan siap afdruk buat satu warna sablon. Hasil pekat dan presisi biar screen gampang nyerap.",
     specs: [
-      { label: "Jumlah warna", value: "1 warna" },
+      { label: "Teknik", value: "FILM" },
       { label: "Media", value: "Kalkir / film transparan" },
       { label: "Ukuran", value: "A4" },
       { label: "Durasi", value: "Same day" },
@@ -373,7 +373,7 @@ const PRODUCTS = [
     description:
       "Pemisahan warna buat desain kompleks sampai 4 lapis film, tiap lapis udah pas register biar gampang pas afdruk.",
     specs: [
-      { label: "Jumlah warna", value: "2 - 4 warna" },
+      { label: "Teknik", value: "FILM" },
       { label: "Media", value: "Kalkir / film transparan" },
       { label: "Ukuran", value: "A4 - A3" },
       { label: "Durasi", value: "1 hari kerja" },
@@ -389,7 +389,7 @@ const PRODUCTS = [
     description:
       "Cetak film positif ukuran A3 buat desain sablon berukuran besar, hasil hitam pekat dan tepi tajam.",
     specs: [
-      { label: "Ukuran", value: "A3" },
+      { label: "Teknik", value: "FILM" },
       { label: "Media", value: "Kalkir / film transparan" },
       { label: "Resolusi", value: "1200 dpi" },
       { label: "Durasi", value: "Same day" },
@@ -405,7 +405,7 @@ const PRODUCTS = [
     description:
       "Ukuran standar buat kebutuhan desain sablon skala kecil, ekonomis buat produksi jumlah terbatas.",
     specs: [
-      { label: "Ukuran", value: "A4" },
+      { label: "Teknik", value: "FILM" },
       { label: "Media", value: "Kalkir / film transparan" },
       { label: "Resolusi", value: "1200 dpi" },
       { label: "Durasi", value: "Same day" },
@@ -421,7 +421,7 @@ const PRODUCTS = [
     description:
       "Paket komplit dari cetak film sampai afdruk screen, screen langsung siap dipakai buat sablon manual.",
     specs: [
-      { label: "Termasuk", value: "Film + afdruk screen" },
+      { label: "Teknik", value: "FILM" },
       { label: "Jumlah warna", value: "1 - 2 warna" },
       { label: "Ukuran screen", value: "30 x 40 cm" },
       { label: "Durasi", value: "1 - 2 hari kerja" },
@@ -439,7 +439,7 @@ const PRODUCTS = [
     description:
       "Afdruk screen dari film desain yang udah jadi, hasil emulsi rata dan tahan buat ratusan kali tarikan sablon.",
     specs: [
-      { label: "Ukuran screen", value: "30 x 40 cm" },
+      { label: "Teknik", value: "SCREEN PRINTING" },
       { label: "Mesh", value: "T61 - T77" },
       { label: "Emulsi", value: "Photo emulsion" },
       { label: "Durasi", value: "1 hari kerja" },
@@ -455,7 +455,7 @@ const PRODUCTS = [
     description:
       "Buat desain full jumbo di kaos atau spanduk kecil, screen ukuran besar dengan hasil afdruk yang tetap presisi.",
     specs: [
-      { label: "Ukuran screen", value: "50 x 60 cm" },
+      { label: "Teknik", value: "SCREEN PRINTING" },
       { label: "Mesh", value: "T61 - T77" },
       { label: "Emulsi", value: "Photo emulsion" },
       { label: "Durasi", value: "1 - 2 hari kerja" },
@@ -471,7 +471,7 @@ const PRODUCTS = [
     description:
       "Sewa frame screen aluminium buat yang mau nyablon sendiri, ringan dan gak gampang melengkung dipakai berkali-kali.",
     specs: [
-      { label: "Bahan frame", value: "Aluminium" },
+      { label: "Teknik", value: "SCREEN PRINTING" },
       { label: "Ukuran", value: "30 x 40 cm" },
       { label: "Satuan", value: "Per hari" },
       { label: "Minimal sewa", value: "1 hari" },
@@ -487,7 +487,7 @@ const PRODUCTS = [
     description:
       "Paket lengkap buat mulai usaha sablon sendiri: screen, rakel, meja sablon mini, dan tinta rubber dasar.",
     specs: [
-      { label: "Termasuk", value: "Screen, rakel, meja mini, tinta" },
+      { label: "Teknik", value: "SCREEN PRINTING" },
       { label: "Ukuran screen", value: "30 x 40 cm" },
       { label: "Cocok untuk", value: "Pemula usaha sablon" },
       { label: "Garansi", value: "Konsultasi pemakaian" },
@@ -503,7 +503,7 @@ const PRODUCTS = [
     description:
       "Harga per pcs buat produksi sablon dalam jumlah besar, cocok buat konveksi atau clothing line yang butuh output cepat.",
     specs: [
-      { label: "Satuan", value: "Per pcs" },
+      { label: "Teknik", value: "SCREEN PRINTING" },
       { label: "Minimal order", value: "100 pcs" },
       { label: "Jumlah warna", value: "1 warna" },
       { label: "Durasi", value: "5 - 7 hari kerja" },
