@@ -655,31 +655,7 @@ section{
 
 @media (max-width:768px){
     .page-nav{
-        right:10px;
-        gap:10px;
-    }
-
-    .page-nav-arrow{
-        width:26px;
-        height:26px;
-    }
-
-    .page-nav-arrow svg{
-        width:13px;
-        height:13px;
-    }
-
-    .page-nav-dots{
-        gap:9px;
-    }
-
-    .page-nav-dot{
-        width:6px;
-        height:6px;
-    }
-
-    .page-nav-dot.active{
-        height:22px;
+        display: none;
     }
 }
 
