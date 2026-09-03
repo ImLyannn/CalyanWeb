@@ -27,7 +27,7 @@ if (!produk) {
     const pSpecs = document.getElementById("pSpecs");
     const pOrder = document.getElementById("pOrder");
 
-    pImage.src = "../gambar/" + produk.icon + ".svg";
+    pImage.src = "../gambar/" + produk.image;
     pImage.alt = produk.title;
     pStock.textContent = "PRINT-" + String(produk.id).padStart(3, "0");
     pTitle.textContent = produk.title;
@@ -46,7 +46,7 @@ if (!produk) {
         .join("");
 
     const pesan = encodeURIComponent(`Halo, saya mau tanya soal ${produk.title} (${formatRupiah(produk.price)}).`);
-    pOrder.href = `https://wa.me/6281234567890?text=${pesan}`;
+    pOrder.href = `https://wa.me/6285934242157?text=${pesan}`;
 
     /* ================= TOMBOL FAVORIT ================= */
 

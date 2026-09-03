@@ -1,7 +1,7 @@
 /* ================================================================
    KATALOG LAYANAN — satu sumber data buat index.js, product.js & catalog.js
    Tinggal edit array ini kalau mau nambah/ubah layanan.
-   icon    : nama file svg di folder /gambar
+   image   : nama file gambar (svg/jpg/png/dll, lengkap dengan ekstensi) di folder /gambar
    category: dipakai buat filter di modal "Katalog Lengkap"
 ================================================================= */
 
@@ -21,9 +21,9 @@ const PRODUCTS = [
   /* ================= HAND PRINTING ================= */
   {
     id: 1,
-    title: "Sablon Manual Rubber Ink",
+    title: "Sablon Manual",
     price: 35000,
-    icon: "mouse",
+    image: "HANDPRINTING1.jpg",
     category: "hand-printing",
     tag: "Best Seller",
     description:
@@ -31,72 +31,72 @@ const PRODUCTS = [
     specs: [
       { label: "Teknik", value: "HAND PRINTING" },
       { label: "Tinta", value: "Rubber ink" },
-      { label: "Media", value: "Kaos katun combed" },
-      { label: "Durasi", value: "12 pcs" },
+      { label: "Media", value: "Cotton" },
+      { label: "Ukuran", value: "Max 1.45m x 27m" },
     ],
   },
   {
     id: 7,
-    title: "Sablon Manual Plastisol",
+    title: "Sablon Manual",
     price: 45000,
-    icon: "mouse",
+    image: "mouse.svg",
     category: "hand-printing",
     tag: "Reguler",
     description:
       "Tinta plastisol dengan hasil warna tebal dan detail lebih tajam, cocok buat desain full color atau gradasi sederhana di atas kain.",
     specs: [
       { label: "Teknik", value: "HAND PRINTING" },
-      { label: "Tinta", value: "Plastisol" },
-      { label: "Media", value: "Kaos, hoodie" },
-      { label: "Minimal order", value: "12 pcs" },
+      { label: "Tinta", value: "Rubber ink" },
+      { label: "Media", value: "Rayon" },
+      { label: "Ukuran", value: "Max 1.45m x 27m" },
     ],
   },
   {
     id: 8,
-    title: "Sablon Manual Tote Bag",
+    title: "Sablon Manual",
     price: 30000,
-    icon: "mouse",
+    image: "mouse.svg",
     category: "hand-printing",
     tag: "Reguler",
     description:
       "Sablon manual khusus tote bag kanvas, pas buat merchandise event, seminar, atau totebag branding usaha kecil.",
     specs: [
       { label: "Teknik", value: "HAND PRINTING" },
-      { label: "Tinta", value: "Rubber ink" },
-      { label: "Media", value: "Kanvas tote bag" },
-      { label: "Minimal order", value: "20 pcs" },
+      { label: "Tinta", value: "Reactive" },
+      { label: "Media", value: "Cotton" },
+      { label: "Ukuran", value: "Max 1.45m x 27m" },
     ],
   },
   {
     id: 9,
-    title: "Sablon Manual Topi",
+    title: "Sablon Manual",
     price: 40000,
-    icon: "mouse",
+    image: "mouse.svg",
     category: "hand-printing",
     tag: "Reguler",
     description:
       "Sablon di permukaan topi yang melengkung, dikerjakan pakai jig khusus biar posisi desain tetap presisi dan rapi.",
     specs: [
       { label: "Teknik", value: "HAND PRINTING" },
-      { label: "Tinta", value: "Rubber ink" },
-      { label: "Media", value: "Topi trucker/baseball" },
-      { label: "Minimal order", value: "12 pcs" },
+      { label: "Tinta", value: "Reaktif" },
+      { label: "Media", value: "Rayon" },
+      { label: "Ukuran", value: "Max 1.45m x 27m" },
     ],
   },
   {
     id: 10,
-    title: "Sablon Manual Multi Warna",
+    title: "Sablon Manual",
     price: 60000,
-    icon: "mouse",
+    image: "mouse.svg",
     category: "hand-printing",
     tag: "Reguler",
     description:
       "Sablon manual sampai 4 warna dalam satu desain, tiap warna dicetak lewat screen terpisah biar hasil rapi dan presisi.",
     specs: [
       { label: "Teknik", value: "HAND PRINTING" },
-      { label: "Jumlah warna", value: "2 - 4 warna" },
-      { label: "Media", value: "Kaos katun combed" },
-      { label: "Minimal order", value: "12 pcs" },
+      { label: "Tinta", value: "Reaktif" },
+      { label: "Media", value: "Silk" },
+      { label: "Ukuran", value: "Max 1.45m x 27m" },
     ],
   },
 
@@ -105,7 +105,7 @@ const PRODUCTS = [
     id: 2,
     title: "Pencelupan Tie Dye",
     price: 55000,
-    icon: "speaker",
+    image: "speaker.svg",
     category: "dying",
     tag: "Best Seller",
     description:
@@ -121,7 +121,7 @@ const PRODUCTS = [
     id: 11,
     title: "Pencelupan Warna Custom",
     price: 40000,
-    icon: "speaker",
+    image: "speaker.svg",
     category: "dying",
     tag: "Reguler",
     description:
@@ -137,7 +137,7 @@ const PRODUCTS = [
     id: 12,
     title: "Pencelupan Ombre Gradasi",
     price: 65000,
-    icon: "speaker",
+    image: "speaker.svg",
     category: "dying",
     tag: "Reguler",
     description:
@@ -153,7 +153,7 @@ const PRODUCTS = [
     id: 13,
     title: "Pencelupan Batik Celup",
     price: 70000,
-    icon: "speaker",
+    image: "speaker.svg",
     category: "dying",
     tag: "Reguler",
     description:
@@ -169,7 +169,7 @@ const PRODUCTS = [
     id: 14,
     title: "Pencelupan Bulk Order",
     price: 25000,
-    icon: "speaker",
+    image: "speaker.svg",
     category: "dying",
     tag: "Reguler",
     description:
@@ -187,7 +187,7 @@ const PRODUCTS = [
     id: 3,
     title: "Sublimasi Kaos Full Print",
     price: 85000,
-    icon: "headset",
+    image: "headset.svg",
     category: "sublimation",
     tag: "Best Seller",
     description:
@@ -203,7 +203,7 @@ const PRODUCTS = [
     id: 15,
     title: "Sublimasi Mug Custom",
     price: 35000,
-    icon: "headset",
+    image: "headset.svg",
     category: "sublimation",
     tag: "Reguler",
     description:
@@ -219,7 +219,7 @@ const PRODUCTS = [
     id: 16,
     title: "Sublimasi Jersey Olahraga",
     price: 95000,
-    icon: "headset",
+    image: "headset.svg",
     category: "sublimation",
     tag: "Reguler",
     description:
@@ -235,7 +235,7 @@ const PRODUCTS = [
     id: 17,
     title: "Sublimasi Merchandise Custom",
     price: 45000,
-    icon: "headset",
+    image: "headset.svg",
     category: "sublimation",
     tag: "Reguler",
     description:
@@ -251,7 +251,7 @@ const PRODUCTS = [
     id: 18,
     title: "Sublimasi Bantal Custom",
     price: 60000,
-    icon: "headset",
+    image: "headset.svg",
     category: "sublimation",
     tag: "Reguler",
     description:
@@ -269,9 +269,9 @@ const PRODUCTS = [
     id: 4,
     title: "Jasa Desain Logo Brand",
     price: 150000,
-    icon: "monitor",
+    image: "monitor.svg",
     category: "design",
-    tag: "Best Seller",
+    tag: "Reguler",
     description:
       "Desain logo dari nol sesuai konsep dan warna brand, lengkap dengan file siap cetak dan siap dipakai buat kebutuhan sablon.",
     specs: [
@@ -285,7 +285,7 @@ const PRODUCTS = [
     id: 19,
     title: "Jasa Desain Kaos Custom",
     price: 75000,
-    icon: "monitor",
+    image: "monitor.svg",
     category: "design",
     tag: "Reguler",
     description:
@@ -301,7 +301,7 @@ const PRODUCTS = [
     id: 20,
     title: "Jasa Desain Kemasan Produk",
     price: 200000,
-    icon: "monitor",
+    image: "monitor.svg",
     category: "design",
     tag: "Reguler",
     description:
@@ -317,7 +317,7 @@ const PRODUCTS = [
     id: 21,
     title: "Jasa Desain Ilustrasi Custom",
     price: 250000,
-    icon: "monitor",
+    image: "monitor.svg",
     category: "design",
     tag: "Reguler",
     description:
@@ -333,7 +333,7 @@ const PRODUCTS = [
     id: 22,
     title: "Jasa Desain Ulang (Revisi Besar)",
     price: 100000,
-    icon: "monitor",
+    image: "monitor.svg",
     category: "design",
     tag: "Reguler",
     description:
@@ -351,9 +351,9 @@ const PRODUCTS = [
     id: 5,
     title: "Separasi Film Sablon 1 Warna",
     price: 25000,
-    icon: "mousepad",
+    image: "mousepad.svg",
     category: "film",
-    tag: "Best Seller",
+    tag: "Reguler",
     description:
       "Pisah desain jadi film transparan siap afdruk buat satu warna sablon. Hasil pekat dan presisi biar screen gampang nyerap.",
     specs: [
@@ -367,7 +367,7 @@ const PRODUCTS = [
     id: 23,
     title: "Separasi Film Sablon Multi Warna",
     price: 50000,
-    icon: "mousepad",
+    image: "mousepad.svg",
     category: "film",
     tag: "Reguler",
     description:
@@ -383,7 +383,7 @@ const PRODUCTS = [
     id: 24,
     title: "Cetak Film Positif A3",
     price: 20000,
-    icon: "mousepad",
+    image: "mousepad.svg",
     category: "film",
     tag: "Reguler",
     description:
@@ -399,7 +399,7 @@ const PRODUCTS = [
     id: 25,
     title: "Cetak Film Positif A4",
     price: 15000,
-    icon: "mousepad",
+    image: "mousepad.svg",
     category: "film",
     tag: "Reguler",
     description:
@@ -415,7 +415,7 @@ const PRODUCTS = [
     id: 26,
     title: "Paket Film + Afdruk Screen",
     price: 65000,
-    icon: "mousepad",
+    image: "mousepad.svg",
     category: "film",
     tag: "Reguler",
     description:
@@ -433,9 +433,9 @@ const PRODUCTS = [
     id: 6,
     title: "Afdruk Screen Sablon Standar",
     price: 45000,
-    icon: "keyboard",
+    image: "keyboard.svg",
     category: "screen-printing",
-    tag: "Best Seller",
+    tag: "Reguler",
     description:
       "Afdruk screen dari film desain yang udah jadi, hasil emulsi rata dan tahan buat ratusan kali tarikan sablon.",
     specs: [
@@ -449,7 +449,7 @@ const PRODUCTS = [
     id: 27,
     title: "Afdruk Screen Ukuran Besar",
     price: 65000,
-    icon: "keyboard",
+    image: "keyboard.svg",
     category: "screen-printing",
     tag: "Reguler",
     description:
@@ -465,7 +465,7 @@ const PRODUCTS = [
     id: 28,
     title: "Sewa Screen Frame Aluminium",
     price: 30000,
-    icon: "keyboard",
+    image: "keyboard.svg",
     category: "screen-printing",
     tag: "Reguler",
     description:
@@ -481,7 +481,7 @@ const PRODUCTS = [
     id: 29,
     title: "Paket Screen Printing Full Set",
     price: 350000,
-    icon: "keyboard",
+    image: "keyboard.svg",
     category: "screen-printing",
     tag: "Reguler",
     description:
@@ -497,7 +497,7 @@ const PRODUCTS = [
     id: 30,
     title: "Screen Printing Produksi Massal",
     price: 20000,
-    icon: "keyboard",
+    image: "keyboard.svg",
     category: "screen-printing",
     tag: "Reguler",
     description:
@@ -548,7 +548,7 @@ function buildProductCard(produk) {
       <a href="${base.productPage}?id=${produk.id}">
         <span class="card-stock">${stockNo}</span>
         <div class="card-image-wrap">
-          <img class="card-image" src="${base.img}${produk.icon}.svg" alt="${produk.title}" loading="lazy">
+          <img class="card-image" src="${base.img}${produk.image}" alt="${produk.title}" loading="lazy">
         </div>
         <h3>${produk.title}</h3>
         <span class="card-tag">${produk.tag}</span>
