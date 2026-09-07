@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Layanan — CALYAN PRINT</title>
-    <meta name="description" content="Detail layanan cetak dan sablon CALYAN PRINT — order langsung lewat WhatsApp.">
+    <title>Detail Layanan — KUBU BALI PRINTING</title>
+    <meta name="description" content="Detail layanan cetak dan sablon KUBU BALI PRINTING — konsultasikan desain Anda langsung lewat WhatsApp.">
 
     <link rel="icon" href="../gambar/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../style.css">
 
@@ -17,9 +17,9 @@
     <script>
         (function(){
             var saved = localStorage.getItem('calyanprint-theme');
-            var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-            if(theme === 'light'){
-                document.documentElement.setAttribute('data-theme','light');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if(theme === 'dark'){
+                document.documentElement.setAttribute('data-theme','dark');
             }
         })();
     </script>
@@ -30,8 +30,8 @@
 
     <nav>
         <div class="logo">
-            <img id="LogoGambar" src="../gambar/logo.png" alt="CALYAN PRINT">
-            CALYAN PRINT
+            <img id="LogoGambar" src="../gambar/logo.png" alt="KUBU BALI PRINTING">
+            KUBU BALI PRINTING
         </div>
 
         <div class="nav-right">
@@ -74,7 +74,7 @@
             <div class="spec-table" id="pSpecs"></div>
 
             <div class="product-actions">
-                <a class="hero-cta" id="pOrder" href="#" target="_blank">Order via WhatsApp</a>
+                <a class="hero-cta" id="pOrder" href="#" target="_blank">Konsultasikan Desain Anda <span class="cta-arrow" aria-hidden="true">→</span></a>
 
                 <button type="button" class="card-fav-btn pdp-fav-btn" id="pFavBtn" aria-label="Simpan ke favorit" aria-pressed="false">
                     <svg viewBox="0 0 24 24"><path d="M12 21s-7.6-4.7-10-9.4C0.3 8.3 2 4.4 5.8 4c2-.2 3.8.7 6.2 3 2.4-2.3 4.2-3.2 6.2-3 3.8.4 5.5 4.3 3.8 7.6C19.6 16.3 12 21 12 21Z"/></svg>
@@ -90,7 +90,7 @@
     </section>
 
     <footer>
-        <span>© 2026 CALYAN PRINT — Denpasar, Bali</span>
+        <span>© 2026 KUBU BALI PRINTING — Denpasar, Bali</span>
         <span>Dibuat buat portofolio PKL</span>
     </footer>
 

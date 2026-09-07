@@ -1,55 +1,62 @@
 /* ================================================================
-   CALYAN PRINT — design tokens
-   Palette   : ink #1B1D24 / surface #23262F / paper #F0EDE4
-               amber #F5A623 (accent) / teal #3ECF8E (status)
-   Type      : Space Grotesk (display) / JetBrains Mono (spec-tags)
-               Inter (body)
+   KUBU BALI PRINTING — design tokens
+   Palette   : krem hangat #FDFBF7 / arang #1A1A1A / aksen terakota #C1502E
+               sekunder zaitun tua #5C6E4A
+   Type      : Playfair Display (display, serif-editorial)
+               Plus Jakarta Sans (body) / JetBrains Mono (spec-tags)
    Signature : layanan ditampilkan sebagai "inventory tag" bernomor
-               stok + ticker spesifikasi berjalan di bawah hero
+               stok + ticker spesifikasi berjalan di bawah hero —
+               dibungkus dalam nuansa studio kreatif yang hangat,
+               bukan template teknologi dingin.
 ================================================================= */
 
 :root{
-    --ink:#1B1D24;
-    --ink-rgb:27,29,36;
-    --surface:#23262F;
-    --surface-raised:#2B2E38;
-    --paper:#1E2029;
-    --paper-ink:#F0EDE4;
-    --amber:#F5A623;
-    --teal:#3ECF8E;
-    --teal-deep:#0F5C63;
-    --text:#F0EDE4;
-    --muted:#8F93A0;
-    --muted-paper:#8F93A0;
-    --rule:#383B46;
-    --rule-paper:#383B46;
-
-    /* nilai tetap — dipakai di atas warna aksen (amber) yang
-       tidak ikut berubah antara night mode & light mode */
-    --ink-fixed:#1B1D24;
-
-    --font-display:'Space Grotesk', sans-serif;
-    --font-mono:'JetBrains Mono', monospace;
-    --font-body:'Inter', sans-serif;
-
-    color-scheme:dark;
-}
-
-/* ================= LIGHT MODE ================= */
-:root[data-theme="light"]{
-    --ink:#FAF9F5;
-    --ink-rgb:250,249,245;
+    --ink:#FDFBF7;
+    --ink-rgb:253,251,247;
     --surface:#FFFFFF;
-    --surface-raised:#F3F1E9;
-    --paper:#F0EDE4;
-    --paper-ink:#1B1D24;
-    --text:#1B1D24;
-    --muted:#6B6F7A;
-    --muted-paper:#6B6F7A;
-    --rule:#E2DECF;
-    --rule-paper:#D8D3C4;
+    --surface-raised:#F4EEE2;
+    --paper:#F3ECDD;
+    --paper-ink:#1A1A1A;
+    --amber:#C1502E;
+    --teal:#5C6E4A;
+    --teal-deep:#3E4A32;
+    --text:#1A1A1A;
+    --muted:#77705F;
+    --muted-paper:#77705F;
+    --rule:rgba(26,26,26,0.14);
+    --rule-paper:rgba(26,26,26,0.16);
+    --status-tutup:#B3432E;
+
+    /* nilai tetap — dipakai di atas warna aksen (terakota) yang
+       tidak ikut berubah antara mode terang & gelap */
+    --ink-fixed:#FDFBF7;
+
+    --font-display:'Playfair Display', serif;
+    --font-mono:'JetBrains Mono', monospace;
+    --font-body:'Plus Jakarta Sans', sans-serif;
 
     color-scheme:light;
+}
+
+/* ================= MODE GELAP (opsional, studio malam) ================= */
+:root[data-theme="dark"]{
+    --ink:#201D18;
+    --ink-rgb:32,29,24;
+    --surface:#2B2620;
+    --surface-raised:#352F27;
+    --paper:#1A1713;
+    --paper-ink:#F3ECDD;
+    --amber:#E0824A;
+    --teal:#8FA06B;
+    --teal-deep:#5C6E4A;
+    --text:#F3ECDD;
+    --muted:#B2A995;
+    --muted-paper:#B2A995;
+    --rule:rgba(243,236,221,0.14);
+    --rule-paper:rgba(243,236,221,0.16);
+    --status-tutup:#E0704F;
+
+    color-scheme:dark;
 }
 
 /* ================= RESET ================= */
@@ -251,11 +258,11 @@ nav{
     display:none;
 }
 
-:root[data-theme="light"] .theme-toggle .icon-sun{
+:root[data-theme="dark"] .theme-toggle .icon-sun{
     display:block;
 }
 
-:root[data-theme="light"] .theme-toggle .icon-moon{
+:root[data-theme="dark"] .theme-toggle .icon-moon{
     display:none;
 }
 
@@ -325,7 +332,7 @@ section{
     padding-top:72px;
     padding-bottom:0;
     background:
-        radial-gradient(circle at 85% 20%, rgba(245,166,35,0.08), transparent 45%),
+        radial-gradient(circle at 85% 20%, rgba(193,80,46,0.08), transparent 45%),
         var(--ink);
 }
 
@@ -356,7 +363,7 @@ section{
     position:absolute;
     inset:0;
     background:
-        radial-gradient(circle at 85% 20%, rgba(245,166,35,0.10), transparent 45%),
+        radial-gradient(circle at 85% 20%, rgba(193,80,46,0.10), transparent 45%),
         linear-gradient(180deg, rgba(var(--ink-rgb),0.55) 0%, rgba(var(--ink-rgb),0.78) 65%, var(--ink) 100%);
 }
 
@@ -364,10 +371,10 @@ section{
     position:relative;
     z-index:1;
     flex:1;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    align-items:end;
+    column-gap:60px;
     max-width:1200px;
     margin:0 auto;
     width:100%;
@@ -376,14 +383,19 @@ section{
 
 .hero-eyebrow{
     font-family:var(--font-mono);
-    font-size:13px;
+    font-size:12px;
     color:var(--teal);
-    letter-spacing:2px;
+    letter-spacing:1.5px;
     text-transform:uppercase;
-    margin-bottom:20px;
-    display:flex;
+    margin-bottom:24px;
+    display:inline-flex;
     align-items:center;
     gap:10px;
+
+    padding:8px 16px 8px 14px;
+    border:1px solid var(--rule);
+    border-radius:50px;
+    background:var(--surface);
 }
 
 .hero-eyebrow::before{
@@ -400,12 +412,12 @@ section{
 }
 
 .hero-eyebrow.status-tutup{
-    color:#E2554A;
+    color:var(--status-tutup);
 }
 
 .hero-eyebrow.status-tutup::before{
-    background:#E2554A;
-    box-shadow:0 0 8px #E2554A;
+    background:var(--status-tutup);
+    box-shadow:0 0 8px var(--status-tutup);
 }
 
 .hero-text h1{
@@ -429,12 +441,20 @@ section{
     line-height:1.6;
 }
 
+.hero-cta-group{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:16px;
+    margin-top:36px;
+}
+
 .hero-cta{
     display:inline-flex;
     align-items:center;
     gap:10px;
 
-    margin-top:36px;
+    margin-top:8px;
     padding:14px 26px;
 
     background:var(--amber);
@@ -448,23 +468,57 @@ section{
     text-decoration:none;
 
     border-radius:4px;
-    transition:transform .2s ease, box-shadow .2s ease;
+    transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease;
 }
 
 .hero-cta:hover{
     transform:translateY(-3px);
-    box-shadow:0 10px 24px rgba(245,166,35,0.25);
+    box-shadow:0 14px 28px -8px rgba(193,80,46,0.4);
+}
+
+.hero-cta .cta-arrow{
+    display:inline-block;
+    transition:transform .25s ease;
+}
+
+.hero-cta:hover .cta-arrow{
+    transform:translateX(4px);
+}
+
+.hero-cta-ghost{
+    background:transparent;
+    border:1px solid var(--rule);
+    color:var(--text);
+    box-shadow:none;
+}
+
+.hero-cta-ghost:hover{
+    background:var(--surface);
+    border-color:var(--amber);
+    color:var(--amber);
+    box-shadow:none;
 }
 
 .hero-panel{
-    flex-shrink:0;
-    width:280px;
+    width:100%;
+    max-width:290px;
+    justify-self:end;
+    margin-bottom:6px;
 
     background:var(--surface);
     border:1px solid var(--rule);
-    border-radius:10px;
+    border-radius:8px;
+    box-shadow:0 24px 50px -20px rgba(26,26,26,0.22);
 
     padding:24px;
+
+    transform:rotate(-1.1deg);
+    transition:transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease;
+}
+
+.hero-panel:hover{
+    transform:rotate(0deg) translateY(-4px);
+    box-shadow:0 30px 60px -18px rgba(26,26,26,0.28);
 }
 
 .hero-panel-row{
@@ -497,7 +551,7 @@ section{
 }
 
 .status-tutup{
-    color:#E2554A;
+    color:var(--status-tutup);
 }
 
 /* selector di atas (.hero-panel-row span:last-child) lebih spesifik
@@ -508,7 +562,7 @@ section{
 }
 
 .hero-panel-row span.status-tutup{
-    color:#E2554A;
+    color:var(--status-tutup);
 }
 
 /* spec ticker — signature element */
@@ -650,7 +704,7 @@ section{
 .page-nav-dot.active{
     height:30px;
     background:var(--amber);
-    box-shadow:0 0 10px rgba(245,166,35,0.5);
+    box-shadow:0 0 10px rgba(193,80,46,0.5);
 }
 
 @media (max-width:768px){
@@ -759,16 +813,22 @@ section{
     position:relative;
     background:var(--surface);
     border:1px solid var(--rule);
-    border-radius:10px;
+    border-radius:6px;
     padding:20px;
 
     cursor:pointer;
-    transition:transform .3s ease, box-shadow .3s ease, background-color .4s ease;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, border-color .3s ease, background-color .4s ease;
 }
 
 .card:hover{
     transform:translateY(-6px);
-    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    border-color:rgba(26,26,26,0.28);
+    box-shadow:0 22px 40px -14px rgba(26,26,26,0.28);
+}
+
+:root[data-theme="dark"] .card:hover{
+    border-color:rgba(243,236,221,0.3);
+    box-shadow:0 22px 40px -14px rgba(0,0,0,0.55);
 }
 
 /* ================= TOMBOL FAVORIT ("pin" ke localStorage) ================= */
@@ -879,7 +939,7 @@ section{
     padding:50px 24px;
 
     border:1px dashed var(--rule);
-    border-radius:12px;
+    border-radius:8px;
 }
 
 .favorite-empty-icon{
@@ -943,7 +1003,7 @@ section{
     aspect-ratio:1/1;
 
     background:var(--surface-raised);
-    border-radius:8px;
+    border-radius:4px;
 
     display:flex;
     align-items:center;
@@ -1111,7 +1171,7 @@ section{
 
     background:var(--ink);
     border:1px solid var(--rule);
-    border-radius:14px;
+    border-radius:10px;
 
     display:flex;
     flex-direction:column;
@@ -1248,6 +1308,96 @@ section{
     margin:0 auto;
 }
 
+/* ================= ABOUT — grid narasi + foto studio ================= */
+
+.about-grid{
+    max-width:1200px;
+    margin:0 auto 64px;
+
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:64px;
+    align-items:center;
+}
+
+.about-copy p{
+    font-size:16px;
+    line-height:1.8;
+    color:var(--muted-paper);
+    max-width:520px;
+}
+
+.about-copy p + p{
+    margin-top:18px;
+}
+
+.about-points{
+    list-style:none;
+    margin-top:28px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.about-points li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+
+    font-size:14.5px;
+    line-height:1.6;
+    color:var(--paper-ink);
+}
+
+.about-points li::before{
+    content:"";
+    flex-shrink:0;
+    width:7px;
+    height:7px;
+    margin-top:7px;
+    border-radius:50%;
+    background:var(--amber);
+}
+
+.about-media{
+    position:relative;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.about-media img{
+    width:100%;
+    height:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    border-radius:6px;
+    border:1px solid var(--rule-paper);
+}
+
+.about-media-photo--offset{
+    transform:translateY(28px) rotate(1.2deg);
+}
+
+.about-media-photo--main{
+    transform:rotate(-1deg);
+}
+
+@media (max-width:900px){
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:36px;
+    }
+
+    .about-media{
+        order:-1;
+    }
+
+    .about-media-photo--offset{
+        transform:translateY(14px) rotate(1.2deg);
+    }
+}
+
 .contact-heading{
     font-family:var(--font-display);
     font-size:26px;
@@ -1375,7 +1525,7 @@ section{
 
     background:var(--surface);
     border:1px solid var(--rule);
-    border-radius:12px;
+    border-radius:8px;
 
     display:flex;
     align-items:center;
@@ -1664,10 +1814,21 @@ a:focus-visible,
     }
 
     .hero-inner{
+        display:flex;
         flex-direction:column;
         align-items:flex-start;
         gap:36px;
         padding:40px 0;
+    }
+
+    .hero-panel{
+        max-width:100%;
+        justify-self:auto;
+        transform:none;
+    }
+
+    .hero-panel:hover{
+        transform:translateY(-2px);
     }
 
     .hero-text h1{

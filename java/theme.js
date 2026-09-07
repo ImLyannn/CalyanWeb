@@ -6,12 +6,12 @@
     var STORAGE_KEY = 'calyanprint-theme';
 
     function getCurrentTheme() {
-        return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
     }
 
     function setTheme(theme) {
-        if (theme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
         } else {
             document.documentElement.removeAttribute('data-theme');
         }
@@ -21,7 +21,7 @@
         if (btn) {
             btn.setAttribute(
                 'aria-label',
-                theme === 'light' ? 'Ganti ke night mode' : 'Ganti ke light mode'
+                theme === 'dark' ? 'Ganti ke mode terang' : 'Ganti ke mode gelap'
             );
         }
     }

@@ -9,7 +9,7 @@
     <link rel="icon" href="gambar/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -17,9 +17,9 @@
     <script>
         (function(){
             var saved = localStorage.getItem('calyanprint-theme');
-            var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-            if(theme === 'light'){
-                document.documentElement.setAttribute('data-theme','light');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            if(theme === 'dark'){
+                document.documentElement.setAttribute('data-theme','dark');
             }
         })();
     </script>
@@ -90,10 +90,13 @@
 
         <div class="hero-inner">
             <div class="hero-text animate-on-load delay-2">
-                <p class="hero-eyebrow" id="jamStatus">Memuat jam operasional…</p>
-                <h1>Sablon dan cetak, dari <span>ide</span> ke tangan lu.</h1>
-                <p>Hand printing, dying, sublimation, design, film, sampai screen printing — dikerjakan buat dipakai, bukan cuma buat dipajang. Order langsung, chat admin, gasss.</p>
-                <a class="hero-cta" href="#product">Lihat Katalog ↓</a>
+                <p class="hero-eyebrow" id="jamStatus">Studio Cetak &amp; Sablon — Denpasar</p>
+                <h1>Menghidupkan <span>Ide</span> di Atas Kain.</h1>
+                <p>Jasa sablon manual, sublimasi, dan cetak merchandise premium — dari sketsa jadi film, film jadi cetakan, dan cetakan jadi produk yang siap dipakai. Bukan cuma buat dipajang.</p>
+                <div class="hero-cta-group">
+                    <a class="hero-cta" href="#product">Lihat Katalog <span class="cta-arrow" aria-hidden="true">→</span></a>
+                    <a class="hero-cta hero-cta-ghost" href="https://wa.me/6285934242157?text=Halo%20KUBU%20BALI%20PRINTING%2C%20saya%20mau%20konsultasi%20desain.">Mulai Project Sekarang</a>
+                </div>
             </div>
 
             <div class="hero-panel animate-on-load delay-3">
@@ -103,15 +106,15 @@
                 </div>
                 <div class="hero-panel-row">
                     <span>Jam buka</span>
-                    <span id="jamBuka">—</span>
+                    <span id="jamBuka">08:00 – 17:00</span>
                 </div>
                 <div class="hero-panel-row">
                     <span>Layanan tersedia</span>
-                    <span>030</span>
+                    <span>30+</span>
                 </div>
                 <div class="hero-panel-row">
-                    <span>Order via</span>
-                    <span>WhatsApp</span>
+                    <span>Konsultasi</span>
+                    <span>Gratis</span>
                 </div>
             </div>
         </div>
@@ -168,22 +171,43 @@
     <!-- ================= ABOUT ================= -->
     <section id="about">
         <div class="section-head animate-on-load delay-4">
-            <h2>Tentang</h2>
+            <h2>Tentang Kami</h2>
             <span class="section-index">KUBU BALI PRINTING</span>
         </div>
-        <p class="animate-on-load delay-5">
-            KUBU BALI PRINTING adalah usaha jasa cetak dan sablon yang berbasis di Denpasar, Bali.
-            Kami ngerjain mulai dari hand printing, dying, sublimation, design, sampai
-            film dan screen printing — buat kaos, merchandise, sampai kebutuhan produksi
-            konveksi. Semua layanan boleh ditanyain detailnya dulu sebelum diorder.
-        </p>
+
+        <div class="about-grid">
+            <div class="about-copy animate-on-load delay-5">
+                <p>
+                    KUBU BALI PRINTING adalah studio jasa cetak dan sablon yang berbasis di
+                    Denpasar, Bali. Kami menangani setiap proses secara langsung di studio kami
+                    sendiri — hand printing, dying, sublimation, design, film, sampai screen
+                    printing — untuk kaos, merchandise, dan kebutuhan produksi konveksi.
+                </p>
+                <p>
+                    Baik untuk pesanan retail perorangan maupun kebutuhan komunitas dan korporat
+                    dalam jumlah besar, setiap detail boleh didiskusikan lebih dulu sebelum
+                    produksi berjalan, supaya hasil akhirnya benar-benar sesuai yang dibayangkan.
+                </p>
+
+                <ul class="about-points">
+                    <li>Melayani pesanan retail perorangan maupun produksi komunitas &amp; korporat</li>
+                    <li>Proses transparan — konsultasi desain dan bahan sebelum cetak jalan</li>
+                    <li>Hasil cetak diperiksa langsung di studio sebelum sampai ke tangan Anda</li>
+                </ul>
+            </div>
+
+            <div class="about-media animate-on-load delay-6">
+                <img class="about-media-photo--main" src="gambar/HANDPRINTING1.jpg" alt="Motif hand printing hasil produksi KUBU BALI PRINTING" loading="lazy">
+                <img class="about-media-photo--offset" src="gambar/HANDPRINTING2.jpg" alt="Motif hand printing lain hasil produksi KUBU BALI PRINTING" loading="lazy">
+            </div>
+        </div>
 
         <h3 class="contact-heading animate-on-load delay-5">Hubungi Kami</h3>
 
         <div class="contact-box animate-on-load delay-6" id="contact">
             <div class="contact-item">
-                <span class="label">Telepon</span>
-                <a href="https://wa.me/6285934242157" target="_blank">0812-3456-7890</a>
+                <span class="label">WhatsApp</span>
+                <a href="https://wa.me/6285934242157" target="_blank">+62 859-3424-2157</a>
             </div>
 
             <div class="contact-item">
@@ -198,7 +222,7 @@
 
             <div class="contact-item">
                 <span class="label">Jam buka</span>
-                <span id="jamBukaAbout">—</span>
+                <span id="jamBukaAbout">08:00 – 17:00</span>
             </div>
         </div>
     </section>

@@ -39,7 +39,7 @@ const PRODUCTS = [
     id: 7,
     title: "Sablon Manual",
     price: 45000,
-    image: "mouse.svg",
+    image: "HANDPRINTING2.jpg",
     category: "hand-printing",
     tag: "Reguler",
     description:
@@ -55,7 +55,7 @@ const PRODUCTS = [
     id: 8,
     title: "Sablon Manual",
     price: 30000,
-    image: "mouse.svg",
+    image: "HANDPRINTING3.jpg",
     category: "hand-printing",
     tag: "Reguler",
     description:
@@ -71,7 +71,7 @@ const PRODUCTS = [
     id: 9,
     title: "Sablon Manual",
     price: 40000,
-    image: "mouse.svg",
+    image: "HANDPRINTING4.jpg",
     category: "hand-printing",
     tag: "Reguler",
     description:
@@ -87,7 +87,7 @@ const PRODUCTS = [
     id: 10,
     title: "Sablon Manual",
     price: 60000,
-    image: "mouse.svg",
+    image: "HANDPRINTING5.jpg",
     category: "hand-printing",
     tag: "Reguler",
     description:

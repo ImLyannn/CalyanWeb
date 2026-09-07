@@ -17,7 +17,7 @@ if (!produk) {
 
 } else {
 
-    document.title = produk.title + " — CALYAN PRINT";
+    document.title = produk.title + " — KUBU BALI PRINTING";
 
     const pImage = document.getElementById("pImage");
     const pStock = document.getElementById("pStock");
