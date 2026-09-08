@@ -9,7 +9,7 @@
     <link rel="icon" href="gambar/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -23,21 +23,11 @@
             }
         })();
     </script>
-
-    <!-- ================= ANIMASI PEMBUKA & ENTRANCE ================= -->
 </head>
 <body>
 
-    <!-- ================= PRELOADER ================= -->
-    <div id="preloader">
-        <div class="loader-text">KUBU BALI PRINTING</div>
-        <div class="loader-bar-container">
-            <div class="loader-bar"></div>
-        </div>
-    </div>
-
     <!-- ================= NAVBAR ================= -->
-    <nav class="animate-on-load delay-1">
+    <nav>
         <div class="logo">
             <img id="LogoGambar" src="gambar/logo.png" alt="KUBU BALI PRINTING">
             KUBU BALI PRINTING
@@ -62,24 +52,6 @@
         </div>
     </nav>
 
-    <!-- ================= PAGE NAVIGATOR (titik posisi halaman, kanan layar) ================= -->
-    <div class="page-nav" id="pageNav" aria-label="Navigasi halaman">
-        <button class="page-nav-arrow" id="pageNavUp" type="button" aria-label="Ke halaman sebelumnya">
-            <svg viewBox="0 0 24 24"><polyline points="6 15 12 9 18 15"></polyline></svg>
-        </button>
-
-        <div class="page-nav-dots" id="pageNavDots">
-            <button class="page-nav-dot" data-target="home" aria-label="Ke Home" type="button"></button>
-            <button class="page-nav-dot" data-target="product" aria-label="Ke Katalog" type="button"></button>
-            <button class="page-nav-dot" data-target="favorite" aria-label="Ke Favorit" type="button"></button>
-            <button class="page-nav-dot" data-target="about" aria-label="Ke Tentang" type="button"></button>
-        </div>
-
-        <button class="page-nav-arrow" id="pageNavDown" type="button" aria-label="Ke halaman berikutnya">
-            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-    </div>
-
     <!-- ================= HOME ================= -->
     <section id="home">
         <!-- Background Home: gambar/video diatur lewat HERO_BACKGROUND
@@ -89,17 +61,17 @@
         </div>
 
         <div class="hero-inner">
-            <div class="hero-text animate-on-load delay-2">
+            <div class="hero-text">
                 <p class="hero-eyebrow" id="jamStatus">Studio Cetak &amp; Sablon — Denpasar</p>
-                <h1>Menghidupkan <span>Ide</span> di Atas Kain.</h1>
+                <h1>Menghidupkan <em>Ide</em> di Atas Kain.</h1>
                 <p>Jasa sablon manual, sublimasi, dan cetak merchandise premium — dari sketsa jadi film, film jadi cetakan, dan cetakan jadi produk yang siap dipakai. Bukan cuma buat dipajang.</p>
                 <div class="hero-cta-group">
                     <a class="hero-cta" href="#product">Lihat Katalog <span class="cta-arrow" aria-hidden="true">→</span></a>
-                    <a class="hero-cta hero-cta-ghost" href="https://wa.me/6285934242157?text=Halo%20KUBU%20BALI%20PRINTING%2C%20saya%20mau%20konsultasi%20desain.">Mulai Project Sekarang</a>
+                    <a class="hero-cta hero-cta-ghost" href="https://wa.me/6285934242157?text=Halo%20KUBU%20BALI%20PRINTING%2C%20saya%20mau%20konsultasi%20desain.">Chat WhatsApp</a>
                 </div>
             </div>
 
-            <div class="hero-panel animate-on-load delay-3">
+            <div class="hero-panel">
                 <div class="hero-panel-row">
                     <span>Lokasi</span>
                     <span>Denpasar, Bali</span>
@@ -118,49 +90,43 @@
                 </div>
             </div>
         </div>
-
-        <div class="ticker animate-on-load delay-4">
-            <div class="ticker-track" id="tickerTrack"></div>
-        </div>
     </section>
 
     <!-- ================= PRODUCT ================= -->
     <section id="product">
-        <div class="section-head animate-on-load delay-4">
+        <div class="section-head">
             <h2>Best Seller</h2>
-            <span class="section-index">LAYANAN TERBAIK</span>
+            <span class="section-index">Layanan terbaik</span>
         </div>
-        <p class="geser animate-on-load delay-4">← Geser untuk melihat layanan →</p>
+        <p class="geser">← Geser untuk melihat layanan →</p>
 
-        <div class="card-container animate-on-load delay-5" id="bestSellerContainer"></div>
+        <div class="card-container" id="bestSellerContainer"></div>
 
-        <br><br>
-
-        <div class="section-head animate-on-load delay-5">
+        <div class="section-head section-head--spaced">
             <h2>Layanan Lainnya</h2>
             <div class="section-head-actions">
-                <span class="section-index">30+ LAYANAN TERSEDIA</span>
+                <span class="section-index">30+ layanan tersedia</span>
                 <button type="button" class="view-catalog-btn" data-open-catalog>
                     Lihat Katalog <span aria-hidden="true">→</span>
                 </button>
             </div>
         </div>
-        <p class="product-geser animate-on-load delay-5">← Geser untuk melihat layanan →</p>
+        <p class="product-geser">← Geser untuk melihat layanan →</p>
 
-        <div class="product-scroll animate-on-load delay-6" id="productContainer"></div>
+        <div class="product-scroll" id="productContainer"></div>
     </section>
 
     <!-- ================= FAVORIT ================= -->
     <section id="favorite">
-        <div class="section-head animate-on-load delay-4">
+        <div class="section-head">
             <h2>Favorit Saya</h2>
-            <span class="section-index" id="favoriteCount">0 LAYANAN DISIMPAN</span>
+            <span class="section-index" id="favoriteCount">0 layanan disimpan</span>
         </div>
-        <p class="product-geser animate-on-load delay-4">← Geser untuk melihat layanan →</p>
+        <p class="product-geser">← Geser untuk melihat layanan →</p>
 
-        <div class="product-scroll animate-on-load delay-5" id="favoriteContainer"></div>
+        <div class="product-scroll" id="favoriteContainer"></div>
 
-        <div class="favorite-empty animate-on-load delay-5" id="favoriteEmpty">
+        <div class="favorite-empty" id="favoriteEmpty">
             <span class="favorite-empty-icon">
                 <svg viewBox="0 0 24 24"><path d="M12 21s-7.6-4.7-10-9.4C0.3 8.3 2 4.4 5.8 4c2-.2 3.8.7 6.2 3 2.4-2.3 4.2-3.2 6.2-3 3.8.4 5.5 4.3 3.8 7.6C19.6 16.3 12 21 12 21Z"/></svg>
             </span>
@@ -170,13 +136,13 @@
 
     <!-- ================= ABOUT ================= -->
     <section id="about">
-        <div class="section-head animate-on-load delay-4">
+        <div class="section-head">
             <h2>Tentang Kami</h2>
-            <span class="section-index">KUBU BALI PRINTING</span>
+            <span class="section-index">Kubu Bali Printing</span>
         </div>
 
         <div class="about-grid">
-            <div class="about-copy animate-on-load delay-5">
+            <div class="about-copy">
                 <p>
                     KUBU BALI PRINTING adalah studio jasa cetak dan sablon yang berbasis di
                     Denpasar, Bali. Kami menangani setiap proses secara langsung di studio kami
@@ -196,18 +162,18 @@
                 </ul>
             </div>
 
-            <div class="about-media animate-on-load delay-6">
+            <div class="about-media">
                 <img class="about-media-photo--main" src="gambar/HANDPRINTING1.jpg" alt="Motif hand printing hasil produksi KUBU BALI PRINTING" loading="lazy">
                 <img class="about-media-photo--offset" src="gambar/HANDPRINTING2.jpg" alt="Motif hand printing lain hasil produksi KUBU BALI PRINTING" loading="lazy">
             </div>
         </div>
 
-        <h3 class="contact-heading animate-on-load delay-5">Hubungi Kami</h3>
+        <h3 class="contact-heading">Hubungi Kami</h3>
 
-        <div class="contact-box animate-on-load delay-6" id="contact">
+        <div class="contact-box" id="contact">
             <div class="contact-item">
                 <span class="label">WhatsApp</span>
-                <a href="https://wa.me/6285934242157" target="_blank">+62 859-3424-2157</a>
+                <a href="https://wa.me/6285934242157">+62 859-3424-2157</a>
             </div>
 
             <div class="contact-item">
@@ -227,14 +193,13 @@
         </div>
     </section>
 
-    <footer class="animate-on-load delay-6">
+    <footer>
         <span>© 2026 KUBU BALI PRINTING — Denpasar, Bali</span>
     </footer>
-    
+
     <script src="java/theme.js"></script>
     <script src="java/nav.js"></script>
     <script src="java/herobg.js"></script>
-    <script src="java/pagenav.js"></script>
     <script src="java/data.js"></script>
     <script src="java/favorite.js"></script>
     <script src="java/catalog.js"></script>

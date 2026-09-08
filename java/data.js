@@ -528,11 +528,21 @@ function getProductById(id) {
    yang didefinisikan di masing-masing halaman HTML.
 ================================================================= */
 
+/* layanan yang belum punya foto produksi asli (masih pakai gambar
+   placeholder ikon) ditampilkan sebagai swatch bertekstur kertas polos
+   dengan nama tekniknya, bukan ikon yang gak nyambung (headset/mouse/dll) */
+function isPlaceholderImage(namaFile) {
+  return typeof namaFile === "string" && namaFile.endsWith(".svg");
+}
+
 function buildProductCard(produk) {
 
   const base = window.SITE_BASE || { img: "gambar/", productPage: "html/product.html" };
-  const stockNo = "PRINT-" + String(produk.id).padStart(3, "0");
   const favAktif = typeof isFavorite === "function" && isFavorite(produk.id);
+
+  const media = isPlaceholderImage(produk.image)
+    ? `<div class="card-image-wrap card-image-wrap--swatch"><span>${produk.category.replace(/-/g, " ")}</span></div>`
+    : `<div class="card-image-wrap"><img class="card-image" src="${base.img}${produk.image}" alt="${produk.title}" loading="lazy"></div>`;
 
   return `
     <div class="card">
@@ -546,10 +556,7 @@ function buildProductCard(produk) {
         <svg viewBox="0 0 24 24"><path d="M12 21s-7.6-4.7-10-9.4C0.3 8.3 2 4.4 5.8 4c2-.2 3.8.7 6.2 3 2.4-2.3 4.2-3.2 6.2-3 3.8.4 5.5 4.3 3.8 7.6C19.6 16.3 12 21 12 21Z"/></svg>
       </button>
       <a href="${base.productPage}?id=${produk.id}">
-        <span class="card-stock">${stockNo}</span>
-        <div class="card-image-wrap">
-          <img class="card-image" src="${base.img}${produk.image}" alt="${produk.title}" loading="lazy">
-        </div>
+        ${media}
         <h3>${produk.title}</h3>
         <span class="card-tag">${produk.tag}</span>
         <span class="card-price">${formatRupiah(produk.price)}</span>

@@ -1,20 +1,5 @@
 /* ================= JAM OPERASIONAL ================= */
-        window.SITE_BASE = { img: "gambar/", productPage: "html/product.html" };
-
-        // ================= PRELOADER & ENTRANCE LOGIC =================
-        window.addEventListener('load', () => {
-            const preloader = document.getElementById('preloader');
-            
-            // Beri sedikit jeda agar animasi loading bar terlihat sempurna
-            setTimeout(() => {
-                preloader.classList.add('hidden');
-                
-                // Opsional: hapus dari DOM setelah transisi selesai untuk menghemat memori
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 600); // Sesuai dengan durasi transition di CSS (0.6s)
-            }, 1200); // Total waktu preloader tampil (1.2 detik)
-        });
+window.SITE_BASE = { img: "gambar/", productPage: "html/product.html" };
 
 function updateJamBuka() {
 
@@ -45,7 +30,7 @@ updateJamBuka();
 
 /* ================= ACAK URUTAN ================= */
 /* Fisher-Yates shuffle — dipakai biar urutan layanan yang tampil
-   di "Layanan Lainnya" dan ticker spec gak keliatan berurutan
+   di "Best Seller" dan "Layanan Lainnya" gak keliatan berurutan
    sesuai id, tiap kali halaman di-reload urutannya beda lagi. */
 function shuffleArray(arr) {
     const hasil = [...arr];
@@ -72,18 +57,4 @@ if (bestSellerContainer) {
 if (productContainer) {
     const lainnya = shuffleArray(PRODUCTS.filter((p) => p.tag !== "Best Seller")).slice(0, LAINNYA_LIMIT);
     productContainer.innerHTML = lainnya.map((p) => buildProductCard(p)).join("") + buildMoreCard();
-}
-
-/* ================= SPEC TICKER ================= */
-
-const tickerTrack = document.getElementById("tickerTrack");
-
-if (tickerTrack) {
-
-    const highlights = shuffleArray(PRODUCTS).map(
-        (p) => `<span><b>${p.title}</b> — ${p.specs[0].value}</span>`
-    ).join("");
-
-    // digandakan biar animasi looping-nya mulus tanpa jeda
-    tickerTrack.innerHTML = highlights + highlights;
 }

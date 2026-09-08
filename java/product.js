@@ -27,9 +27,16 @@ if (!produk) {
     const pSpecs = document.getElementById("pSpecs");
     const pOrder = document.getElementById("pOrder");
 
-    pImage.src = "../gambar/" + produk.image;
-    pImage.alt = produk.title;
-    pStock.textContent = "PRINT-" + String(produk.id).padStart(3, "0");
+    const productImageWrap = pImage.closest(".product-image");
+    if (typeof isPlaceholderImage === "function" && isPlaceholderImage(produk.image)) {
+        pImage.remove();
+        productImageWrap.innerHTML = `<div class="card-image-wrap card-image-wrap--swatch"><span>${produk.category.replace(/-/g, " ")}</span></div>`;
+    } else {
+        pImage.src = "../gambar/" + produk.image;
+        pImage.alt = produk.title;
+    }
+
+    pStock.textContent = produk.category.replace(/-/g, " ");
     pTitle.textContent = produk.title;
     pPrice.textContent = formatRupiah(produk.price);
     pDescription.textContent = produk.description;
