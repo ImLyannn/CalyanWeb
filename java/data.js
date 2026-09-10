@@ -25,7 +25,7 @@ const PRODUCTS = [
     price: 35000,
     image: "HANDPRINTING1.jpg",
     category: "hand-printing",
-    tag: "Best Seller",
+    tag: "Unggulan",
     description:
       "Sablon manual pakai tinta rubber yang elastis dan nutup rapat di kain gelap maupun terang. Hasil solid, gak gampang retak walau sering dicuci.",
     specs: [
@@ -107,7 +107,7 @@ const PRODUCTS = [
     price: 55000,
     image: "speaker.svg",
     category: "dying",
-    tag: "Best Seller",
+    tag: "Unggulan",
     description:
       "Pencelupan kain dengan pola tie dye spiral, swirl, atau ombre. Warna dikunci pakai fiksasi biar gak gampang luntur pas dicuci.",
     specs: [
@@ -189,7 +189,7 @@ const PRODUCTS = [
     price: 85000,
     image: "headset.svg",
     category: "sublimation",
-    tag: "Best Seller",
+    tag: "Unggulan",
     description:
       "Cetak desain full satu badan kaos, warna tajam dan gak mudah pudar karena tinta meresap langsung ke serat kain.",
     specs: [
@@ -538,7 +538,6 @@ function isPlaceholderImage(namaFile) {
 function buildProductCard(produk) {
 
   const base = window.SITE_BASE || { img: "gambar/", productPage: "html/product.html" };
-  const favAktif = typeof isFavorite === "function" && isFavorite(produk.id);
 
   const media = isPlaceholderImage(produk.image)
     ? `<div class="card-image-wrap card-image-wrap--swatch"><span>${produk.category.replace(/-/g, " ")}</span></div>`
@@ -546,15 +545,6 @@ function buildProductCard(produk) {
 
   return `
     <div class="card">
-      <button
-        type="button"
-        class="card-fav-btn${favAktif ? " active" : ""}"
-        data-id="${produk.id}"
-        aria-label="Simpan ke favorit"
-        aria-pressed="${favAktif ? "true" : "false"}"
-      >
-        <svg viewBox="0 0 24 24"><path d="M12 21s-7.6-4.7-10-9.4C0.3 8.3 2 4.4 5.8 4c2-.2 3.8.7 6.2 3 2.4-2.3 4.2-3.2 6.2-3 3.8.4 5.5 4.3 3.8 7.6C19.6 16.3 12 21 12 21Z"/></svg>
-      </button>
       <a href="${base.productPage}?id=${produk.id}">
         ${media}
         <h3>${produk.title}</h3>

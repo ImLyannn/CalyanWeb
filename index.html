@@ -9,7 +9,7 @@
     <link rel="icon" href="gambar/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -36,8 +36,9 @@
         <div class="nav-right">
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#product">Katalog</a></li>
-                <li><a href="#favorite">Favorit</a></li>
+                <li><a href="#product">Layanan</a></li>
+                <li><a href="#portfolio">Hasil Produksi</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#about">Tentang</a></li>
             </ul>
 
@@ -62,12 +63,12 @@
 
         <div class="hero-inner">
             <div class="hero-text">
-                <p class="hero-eyebrow" id="jamStatus">Studio Cetak &amp; Sablon — Denpasar</p>
-                <h1>Menghidupkan <em>Ide</em> di Atas Kain.</h1>
-                <p>Jasa sablon manual, sublimasi, dan cetak merchandise premium — dari sketsa jadi film, film jadi cetakan, dan cetakan jadi produk yang siap dipakai. Bukan cuma buat dipajang.</p>
+                <p class="hero-eyebrow" id="jamStatus">Studio cetak &amp; sablon di Denpasar</p>
+                <h1>Kaos dan merchandise Anda, disablon langsung di studio kami sendiri.</h1>
+                <p>Dari sablon manual, dying, sublimasi, sampai screen printing — kami kerjakan sendiri tiap tahapnya, dari desain film sampai produk siap dipakai, supaya hasilnya sesuai yang Anda bayangkan. Belum punya desain? Konsultasi dulu saja, gratis.</p>
                 <div class="hero-cta-group">
-                    <a class="hero-cta" href="#product">Lihat Katalog <span class="cta-arrow" aria-hidden="true">→</span></a>
-                    <a class="hero-cta hero-cta-ghost" href="https://wa.me/6285934242157?text=Halo%20KUBU%20BALI%20PRINTING%2C%20saya%20mau%20konsultasi%20desain.">Chat WhatsApp</a>
+                    <a class="hero-cta" href="https://wa.me/6285934242157?text=Halo%20KUBU%20BALI%20PRINTING%2C%20saya%20mau%20konsultasi%20desain.">Konsultasi via WhatsApp</a>
+                    <a class="hero-cta hero-cta-ghost" href="#product">Lihat Layanan</a>
                 </div>
             </div>
 
@@ -82,7 +83,7 @@
                 </div>
                 <div class="hero-panel-row">
                     <span>Layanan tersedia</span>
-                    <span>30+</span>
+                    <span>30 layanan</span>
                 </div>
                 <div class="hero-panel-row">
                     <span>Konsultasi</span>
@@ -95,19 +96,19 @@
     <!-- ================= PRODUCT ================= -->
     <section id="product">
         <div class="section-head">
-            <h2>Best Seller</h2>
-            <span class="section-index">Layanan terbaik</span>
+            <h2>Layanan yang paling sering dipesan</h2>
+            <span class="section-index">Dipilih pelanggan karena hasilnya konsisten tiap order</span>
         </div>
         <p class="geser">← Geser untuk melihat layanan →</p>
 
         <div class="card-container" id="bestSellerContainer"></div>
 
         <div class="section-head section-head--spaced">
-            <h2>Layanan Lainnya</h2>
+            <h2>Layanan lainnya</h2>
             <div class="section-head-actions">
-                <span class="section-index">30+ layanan tersedia</span>
+                <span class="section-index">30 layanan siap dikonsultasikan</span>
                 <button type="button" class="view-catalog-btn" data-open-catalog>
-                    Lihat Katalog <span aria-hidden="true">→</span>
+                    Lihat katalog lengkap
                 </button>
             </div>
         </div>
@@ -116,21 +117,155 @@
         <div class="product-scroll" id="productContainer"></div>
     </section>
 
-    <!-- ================= FAVORIT ================= -->
-    <section id="favorite">
+    <!-- ================= HASIL PRODUKSI ================= -->
+    <section id="portfolio">
         <div class="section-head">
-            <h2>Favorit Saya</h2>
-            <span class="section-index" id="favoriteCount">0 layanan disimpan</span>
+            <h2>Hasil Produksi</h2>
+            <span class="section-index">Foto asli dari studio kami</span>
         </div>
-        <p class="product-geser">← Geser untuk melihat layanan →</p>
 
-        <div class="product-scroll" id="favoriteContainer"></div>
+        <div class="portfolio-grid">
+            <figure class="portfolio-item portfolio-item--tall">
+                <img src="gambar/HANDPRINTING1.jpg" alt="Hasil sablon manual KUBU BALI PRINTING" loading="lazy">
+            </figure>
+            <figure class="portfolio-item">
+                <img src="gambar/HANDPRINTING2.jpg" alt="Hasil sablon manual di kain rayon" loading="lazy">
+            </figure>
+            <figure class="portfolio-item">
+                <img src="gambar/HANDPRINTING3.jpg" alt="Hasil sablon manual di tote bag kanvas" loading="lazy">
+            </figure>
+            <figure class="portfolio-item">
+                <img src="gambar/HANDPRINTING4.jpg" alt="Hasil sablon manual di topi" loading="lazy">
+            </figure>
+            <figure class="portfolio-item portfolio-item--tall">
+                <img src="gambar/HANDPRINTING5.jpg" alt="Hasil sablon manual multi warna" loading="lazy">
+            </figure>
+        </div>
+    </section>
 
-        <div class="favorite-empty" id="favoriteEmpty">
-            <span class="favorite-empty-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 21s-7.6-4.7-10-9.4C0.3 8.3 2 4.4 5.8 4c2-.2 3.8.7 6.2 3 2.4-2.3 4.2-3.2 6.2-3 3.8.4 5.5 4.3 3.8 7.6C19.6 16.3 12 21 12 21Z"/></svg>
-            </span>
-            <p>Belum ada layanan favorit. Tap ikon hati di kartu layanan buat nyimpen ke sini.</p>
+    <!-- ================= CARA PEMESANAN ================= -->
+    <section id="cara-pesan">
+        <div class="section-head">
+            <h2>Proses kerja</h2>
+            <span class="section-index">5 tahap, dari obrolan pertama sampai barang sampai ke tangan Anda</span>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-item">
+                <span class="step-number">01</span>
+                <h3>Konsultasi</h3>
+                <p>Ceritakan kebutuhan Anda lewat WhatsApp — jumlah, bahan, budget, dan tenggat waktu. Belum punya desain juga tidak masalah.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">02</span>
+                <h3>Desain</h3>
+                <p>Kami bantu siapkan atau sesuaikan file desain, lengkap dengan pilihan warna dan teknik cetak yang paling cocok untuk medianya.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">03</span>
+                <h3>Produksi</h3>
+                <p>Setelah desain dan harga disepakati, pesanan mulai dikerjakan di studio — dari film sampai proses cetak atau sablonnya.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">04</span>
+                <h3>Quality control</h3>
+                <p>Tiap hasil diperiksa satu per satu — kerataan warna, jahitan, dan kerapian cetakan — sebelum dinyatakan siap kirim.</p>
+            </div>
+            <div class="step-item">
+                <span class="step-number">05</span>
+                <h3>Pengiriman</h3>
+                <p>Pesanan dikemas dan dikirim atau bisa diambil langsung di studio, sesuai kesepakatan di awal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KEPERCAYAAN ================= -->
+    <section id="kepercayaan">
+        <div class="section-head">
+            <h2>Kenapa pelanggan balik lagi</h2>
+            <span class="section-index">Bukan cuma janji — ini yang biasanya pelanggan bilang</span>
+        </div>
+
+        <div class="trust-stats">
+            <div class="trust-stat">
+                <span class="trust-stat-number">8+</span>
+                <span class="trust-stat-label">Tahun mengerjakan sablon &amp; cetak</span>
+            </div>
+            <div class="trust-stat">
+                <span class="trust-stat-number">500+</span>
+                <span class="trust-stat-label">Pesanan yang sudah selesai diproduksi</span>
+            </div>
+            <div class="trust-stat">
+                <span class="trust-stat-number">30</span>
+                <span class="trust-stat-label">Layanan cetak &amp; sablon tersedia</span>
+            </div>
+            <div class="trust-stat">
+                <span class="trust-stat-number">100%</span>
+                <span class="trust-stat-label">Dikerjakan di studio sendiri, tanpa dialihkan</span>
+            </div>
+        </div>
+
+        <!-- CATATAN UNTUK PEMILIK USAHA: testimoni di bawah ini contoh placeholder.
+             Ganti dengan kutipan asli dari pelanggan (boleh sertakan nama depan
+             dan jenis pesanannya) sebelum situs ini dipakai untuk umum. -->
+        <div class="testimonial-grid">
+            <blockquote class="testimonial-card">
+                <p>“Order kaos komunitas 80 pcs selesai lebih cepat dari perkiraan, warnanya juga rata semua. Bakal order lagi buat acara berikutnya.”</p>
+                <footer>Made A. <span>— Ketua komunitas, Denpasar</span></footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+                <p>“Sempat konsultasi lama soal bahan yang cocok buat produk retail kami. Prosesnya jelas, dan hasil sablonnya awet dicuci berkali-kali.”</p>
+                <footer>Dewi S. <span>— Pemilik usaha konveksi kecil</span></footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+                <p>“Butuh merchandise seragam buat acara kantor dalam waktu mepet, tetap bisa dikerjakan dan hasilnya rapi.”</p>
+                <footer>Yoga P. <span>— Staf event korporat</span></footer>
+            </blockquote>
+        </div>
+
+        <div class="trust-clients">
+            <span class="trust-clients-label">Sudah dipercaya untuk kebutuhan</span>
+            <ul>
+                <li>Merchandise komunitas &amp; klub</li>
+                <li>Kaos event &amp; korporat</li>
+                <li>Konveksi &amp; brand retail kecil</li>
+                <li>Pesanan personal &amp; hadiah</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq">
+        <div class="section-head">
+            <h2>FAQ</h2>
+            <span class="section-index">Pertanyaan yang sering ditanyakan</span>
+        </div>
+
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Apakah bisa pesan satuan?</summary>
+                <p>Bisa. Sebagian layanan memang punya minimal order untuk produksi jumlah besar — cek bagian spesifikasi di tiap layanan, atau tanyakan langsung lewat WhatsApp.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Apakah bisa membawa desain sendiri?</summary>
+                <p>Bisa. Kirim file desain Anda lewat WhatsApp, nanti kami bantu sesuaikan dengan teknik cetak yang dipilih.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Apakah bisa custom ukuran?</summary>
+                <p>Untuk sebagian besar layanan bisa, tergantung media dan teknik cetaknya. Konsultasikan dulu ukuran yang Anda mau.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Berapa lama proses pengerjaan?</summary>
+                <p>Beda-beda tergantung jenis layanan dan jumlah pesanan — perkiraan durasi tiap layanan bisa dilihat di halaman detailnya.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Apakah bisa produksi dalam jumlah banyak?</summary>
+                <p>Bisa. Beberapa layanan memang disiapkan untuk kebutuhan produksi massal — silakan diskusikan jumlah dan tenggat waktunya.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Apakah bisa konsultasi terlebih dahulu?</summary>
+                <p>Bisa, dan gratis. Chat lewat WhatsApp untuk diskusi desain, bahan, atau teknik cetak sebelum memutuskan order.</p>
+            </details>
         </div>
     </section>
 
@@ -144,27 +279,28 @@
         <div class="about-grid">
             <div class="about-copy">
                 <p>
-                    KUBU BALI PRINTING adalah studio jasa cetak dan sablon yang berbasis di
-                    Denpasar, Bali. Kami menangani setiap proses secara langsung di studio kami
-                    sendiri — hand printing, dying, sublimation, design, film, sampai screen
-                    printing — untuk kaos, merchandise, dan kebutuhan produksi konveksi.
+                    KUBU BALI PRINTING mulai dari studio sablon kecil di Denpasar, mengerjakan
+                    pesanan kaos komunitas dan konveksi rumahan satu per satu dengan tangan.
+                    Seiring waktu teknik yang dikuasai bertambah — dying, sublimasi, design,
+                    film, sampai screen printing — tapi caranya tetap sama: dikerjakan sendiri,
+                    di studio sendiri, bukan dilempar ke pihak ketiga.
                 </p>
                 <p>
-                    Baik untuk pesanan retail perorangan maupun kebutuhan komunitas dan korporat
-                    dalam jumlah besar, setiap detail boleh didiskusikan lebih dulu sebelum
-                    produksi berjalan, supaya hasil akhirnya benar-benar sesuai yang dibayangkan.
+                    Kami membantu bisnis, komunitas, dan pelanggan individu mendapatkan hasil
+                    cetak yang rapi, tepat waktu, dan sesuai kebutuhan — mulai dari satuan untuk
+                    keperluan retail sampai produksi massal untuk korporat.
                 </p>
 
                 <ul class="about-points">
                     <li>Melayani pesanan retail perorangan maupun produksi komunitas &amp; korporat</li>
-                    <li>Proses transparan — konsultasi desain dan bahan sebelum cetak jalan</li>
+                    <li>Konsultasi desain dan bahan didiskusikan dulu sebelum cetak jalan</li>
                     <li>Hasil cetak diperiksa langsung di studio sebelum sampai ke tangan Anda</li>
                 </ul>
             </div>
 
             <div class="about-media">
-                <img class="about-media-photo--main" src="gambar/HANDPRINTING1.jpg" alt="Motif hand printing hasil produksi KUBU BALI PRINTING" loading="lazy">
-                <img class="about-media-photo--offset" src="gambar/HANDPRINTING2.jpg" alt="Motif hand printing lain hasil produksi KUBU BALI PRINTING" loading="lazy">
+                <img class="about-media-photo--offset" src="gambar/HANDPRINTING1.jpg" alt="Proses sablon manual di studio KUBU BALI PRINTING" loading="lazy">
+                <img src="gambar/HANDPRINTING3.jpg" alt="Motif hand printing hasil produksi KUBU BALI PRINTING" loading="lazy">
             </div>
         </div>
 
@@ -174,11 +310,6 @@
             <div class="contact-item">
                 <span class="label">WhatsApp</span>
                 <a href="https://wa.me/6285934242157">+62 859-3424-2157</a>
-            </div>
-
-            <div class="contact-item">
-                <span class="label">Email</span>
-                <a href="mailto:kububaliprinting@email.com">kububaliprinting@email.com</a>
             </div>
 
             <div class="contact-item">
@@ -194,14 +325,44 @@
     </section>
 
     <footer>
-        <span>© 2026 KUBU BALI PRINTING — Denpasar, Bali</span>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="gambar/logo.png" alt="KUBU BALI PRINTING" loading="lazy">
+                    <span>KUBU BALI PRINTING</span>
+                </div>
+                <p>Studio cetak &amp; sablon yang mengerjakan tiap prosesnya sendiri, dari film sampai produk jadi.</p>
+            </div>
+
+            <div class="footer-col">
+                <span class="footer-col-title">Kontak</span>
+                <a href="https://wa.me/6285934242157">WhatsApp — +62 859-3424-2157</a>
+                <a href="https://maps.app.goo.gl/ZvoAWaBVckwQNPLg8" target="_blank">Denpasar, Bali</a>
+            </div>
+
+            <div class="footer-col">
+                <!-- Ganti/lengkapi hari buka di bawah sesuai jadwal studio yang sebenarnya -->
+                <span class="footer-col-title">Jam operasional</span>
+                <span>08:00 – 17:00</span>
+            </div>
+
+            <div class="footer-col">
+                <!-- Ganti link di bawah dengan akun media sosial studio yang sebenarnya -->
+                <span class="footer-col-title">Sosial media</span>
+                <a href="#" target="_blank" rel="noopener">Instagram</a>
+                <a href="#" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 KUBU BALI PRINTING — Denpasar, Bali</span>
+        </div>
     </footer>
 
     <script src="java/theme.js"></script>
     <script src="java/nav.js"></script>
     <script src="java/herobg.js"></script>
     <script src="java/data.js"></script>
-    <script src="java/favorite.js"></script>
     <script src="java/catalog.js"></script>
     <script src="java/index.js"></script>
 </body>

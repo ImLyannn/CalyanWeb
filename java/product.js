@@ -8,10 +8,10 @@ if (!produk) {
 
     productDetail.innerHTML = `
         <div class="product-info">
-            <p class="card-stock">LAYANAN TIDAK DITEMUKAN</p>
-            <h1>Layanan tidak ditemukan</h1>
-            <p>Link yang lu buka sepertinya salah atau layanannya udah gak ada di katalog.</p>
-            <a class="hero-cta" href="../index.html#product">Kembali ke Katalog</a>
+            <p class="card-stock">Layanan tidak ditemukan</p>
+            <h1>Sepertinya link ini sudah tidak berlaku</h1>
+            <p>Layanan yang dicari mungkin sudah dipindah atau link-nya salah ketik. Coba kembali ke katalog untuk melihat layanan yang tersedia.</p>
+            <a class="hero-cta" href="../index.html#product">Kembali ke katalog</a>
         </div>
     `;
 
@@ -55,28 +55,16 @@ if (!produk) {
     const pesan = encodeURIComponent(`Halo, saya mau tanya soal ${produk.title} (${formatRupiah(produk.price)}).`);
     pOrder.href = `https://wa.me/6285934242157?text=${pesan}`;
 
-    /* ================= TOMBOL FAVORIT ================= */
-
-    const pFavBtn = document.getElementById("pFavBtn");
-    if (pFavBtn) {
-        const favAktif = typeof isFavorite === "function" && isFavorite(produk.id);
-
-        pFavBtn.dataset.id = produk.id;
-        pFavBtn.classList.toggle("active", favAktif);
-        pFavBtn.setAttribute("aria-pressed", favAktif ? "true" : "false");
-
-        const label = pFavBtn.querySelector("span");
-        if (label) label.textContent = favAktif ? "Tersimpan" : "Favorit";
-    }
-
     /* ================= REKOMENDASI ================= */
+    /* Urutan stabil: layanan lain di kategori yang sama duluan,
+       baru sisanya, biar rekomendasi gak berubah-ubah tiap reload. */
 
     const recommendContainer = document.getElementById("recommendContainer");
 
-    const rekomendasi = PRODUCTS
-        .filter((p) => p.id !== produk.id)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 9);
+    const lainnya = PRODUCTS.filter((p) => p.id !== produk.id);
+    const kategoriSama = lainnya.filter((p) => p.category === produk.category);
+    const kategoriLain = lainnya.filter((p) => p.category !== produk.category);
+    const rekomendasi = kategoriSama.concat(kategoriLain).slice(0, 9);
 
     recommendContainer.innerHTML =
         rekomendasi.map((p) => buildProductCard(p)).join("") + buildMoreCard();

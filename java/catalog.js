@@ -30,8 +30,8 @@ function injectCatalogModal() {
     <div class="catalog-modal-inner">
       <div class="catalog-modal-header">
         <div>
-          <span class="section-index">KATALOG LENGKAP</span>
-          <h2>Semua Layanan</h2>
+          <span class="section-index">Katalog lengkap</span>
+          <h2>Semua layanan</h2>
         </div>
         <button type="button" class="modal-close" id="catalogModalClose" aria-label="Tutup katalog">✕</button>
       </div>

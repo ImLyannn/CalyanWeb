@@ -28,19 +28,6 @@ function updateJamBuka() {
 
 updateJamBuka();
 
-/* ================= ACAK URUTAN ================= */
-/* Fisher-Yates shuffle — dipakai biar urutan layanan yang tampil
-   di "Best Seller" dan "Layanan Lainnya" gak keliatan berurutan
-   sesuai id, tiap kali halaman di-reload urutannya beda lagi. */
-function shuffleArray(arr) {
-    const hasil = [...arr];
-    for (let i = hasil.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [hasil[i], hasil[j]] = [hasil[j], hasil[i]];
-    }
-    return hasil;
-}
-
 /* ================= KARTU LAYANAN ================= */
 /* Jumlah maksimal kartu yang ditampilkan di baris "Layanan Lainnya"
    sebelum kartu "Lihat Lebih Lengkap" muncul di ujung baris. */
@@ -50,11 +37,11 @@ const bestSellerContainer = document.getElementById("bestSellerContainer");
 const productContainer = document.getElementById("productContainer");
 
 if (bestSellerContainer) {
-    const bestSellers = shuffleArray(PRODUCTS.filter((p) => p.tag === "Best Seller"));
-    bestSellerContainer.innerHTML = bestSellers.map((p) => buildProductCard(p)).join("");
+    const layananUnggulan = PRODUCTS.filter((p) => p.tag === "Unggulan");
+    bestSellerContainer.innerHTML = layananUnggulan.map((p) => buildProductCard(p)).join("");
 }
 
 if (productContainer) {
-    const lainnya = shuffleArray(PRODUCTS.filter((p) => p.tag !== "Best Seller")).slice(0, LAINNYA_LIMIT);
+    const lainnya = PRODUCTS.filter((p) => p.tag !== "Unggulan").slice(0, LAINNYA_LIMIT);
     productContainer.innerHTML = lainnya.map((p) => buildProductCard(p)).join("") + buildMoreCard();
 }
