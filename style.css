@@ -16,15 +16,18 @@
     --ink-rgb:242,233,216;
     --surface:#FFFFFF;
     --surface-raised:#E9DEC7;
-    --paper:#1E1B15;
-    --paper-ink:#F2E9D8;
+    /* FIX: dulu di-hardcode gelap terus (#1E1B15 dkk) walau lagi di mode
+       terang, makanya section Tentang & Cara Pesan kelihatan "nyangkut"
+       gelap pas toggle ke light mode. Sekarang ikut palet terang. */
+    --paper:var(--surface-raised);
+    --paper-ink:var(--text);
     --amber:#BD7A1E;
     --teal:#5B6B3F;
     --text:#211D16;
     --muted:#6E6250;
-    --muted-paper:#B3A88F;
+    --muted-paper:var(--muted);
     --rule:rgba(33,29,22,0.15);
-    --rule-paper:rgba(242,233,216,0.14);
+    --rule-paper:var(--rule);
     --status-tutup:#A8431F;
 
     /* nilai tetap — dipakai di atas warna aksen yang tidak ikut
